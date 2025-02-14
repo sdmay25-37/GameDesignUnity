@@ -10,10 +10,13 @@ public class EquipmentSet {
     private Item[] equipmentSetList;
 
     public EquipmentSet(){
-        equipmentSetList = new Item[3];
-        equipmentSetList[0] = new Item {itemType = Item.ItemType.Empty};
-        equipmentSetList[1] = new Item {itemType = Item.ItemType.Empty};
-        equipmentSetList[2] = new Item {itemType = Item.ItemType.Empty};
+        equipmentSetList = MainManager.Instance.equipmentSetList;
+        if (!MainManager.Instance.equipmentInit){
+            MainManager.Instance.equipmentInit = true;
+            equipmentSetList[0] = new Item {itemType = Item.ItemType.Empty};
+            equipmentSetList[1] = new Item {itemType = Item.ItemType.Empty};
+            equipmentSetList[2] = new Item {itemType = Item.ItemType.Empty};
+        }
     }
 
     public void EquipItem(Item item, int index){

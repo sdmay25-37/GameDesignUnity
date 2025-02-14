@@ -12,7 +12,6 @@ public class ItemAssets : MonoBehaviour
     }
 
     public Transform pfItemObject;
-
     public Sprite gPaHat;
     public Sprite normalLantern;
     public Sprite coin;
@@ -21,5 +20,4 @@ public class ItemAssets : MonoBehaviour
     public Sprite seed1;
     public Sprite seed2;
     public Sprite seed3;  
-
 }
