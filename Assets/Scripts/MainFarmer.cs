@@ -302,8 +302,8 @@ public class MainFarmer : MonoBehaviour
     public void Death(){
         if(hat == true){
             equipmentSet.UnequipItem(0, true);
-            equipmentSet.UnequipItem(1, true);
         }else{
+            equipmentSet.UnequipItem(1, true);
             MainManager.Instance.died = true;
         }
     }
