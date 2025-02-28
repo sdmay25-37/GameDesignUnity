@@ -25517,7 +25517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemObject: {fileID: 7789002244926087502, guid: b245c986f3d92cd4d99bdf1f938a44b8, type: 3}
   gPaHat: {fileID: -1222707457, guid: 5d046885ce56c2b4db4774e9db331550, type: 3}
-  normalLantern: {fileID: -6329420634031446844, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
+  normalLantern: {fileID: -1549110363, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   coin: {fileID: 1290532464073988732, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
   empty: {fileID: 0}
@@ -33100,6 +33100,7 @@ GameObject:
   - component: {fileID: 1167416721}
   - component: {fileID: 1167416720}
   - component: {fileID: 1167416727}
+  - component: {fileID: 1167416728}
   - component: {fileID: 1167416726}
   - component: {fileID: 1167416725}
   m_Layer: 0
@@ -33138,7 +33139,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.15}
@@ -33208,6 +33209,7 @@ MonoBehaviour:
   multiplierSpeed: 6
   regularSpeed: 3
   multiply: 0
+  light: 0
   point: {fileID: 1538304952}
   controllers:
   - {fileID: 1040998892}
@@ -33266,7 +33268,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167416719}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -33294,6 +33296,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1167416728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167416719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c755eb45a59ffb249b88cec06e0c72fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyCollider: {fileID: 1167416720}
 --- !u!1 &1299396052
 GameObject:
   m_ObjectHideFlags: 0
@@ -33844,7 +33859,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 10
+  m_PointLightOuterRadius: 7
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

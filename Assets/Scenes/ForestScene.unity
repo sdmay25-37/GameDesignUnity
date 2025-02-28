@@ -73335,6 +73335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c755eb45a59ffb249b88cec06e0c72fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodyCollider: {fileID: 800709838}
 --- !u!70 &800709838
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -73434,6 +73435,7 @@ MonoBehaviour:
   multiplierSpeed: 6
   regularSpeed: 3
   multiply: 0
+  light: 0
   point: {fileID: 0}
   controllers:
   - {fileID: 0}
@@ -73475,7 +73477,7 @@ GameObject:
   - component: {fileID: 857592442}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73541,7 +73543,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -75071,7 +75073,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360.00003
   m_PointLightOuterAngle: 360.00003
   m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 8
+  m_PointLightOuterRadius: 6
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -99063,8 +99065,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemObject: {fileID: 7789002244926087502, guid: b245c986f3d92cd4d99bdf1f938a44b8, type: 3}
   gPaHat: {fileID: -1222707457, guid: 5d046885ce56c2b4db4774e9db331550, type: 3}
-  normalLantern: {fileID: 511133483, guid: 35841bca6e566eb47879b2292e2d3e82, type: 3}
-  coin: {fileID: 6631717109063506053, guid: 7ead8ba5dc6d79f4da1cc2f449bde712, type: 3}
+  normalLantern: {fileID: 1125022499, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  coin: {fileID: -1158198841, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
   empty: {fileID: 0}
   seed1: {fileID: 21300000, guid: 76d29784383e9fa4e93f229887e70325, type: 3}
@@ -99100,7 +99102,7 @@ GameObject:
   - component: {fileID: 1982403486}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99166,7 +99168,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -99484,7 +99486,7 @@ GameObject:
   - component: {fileID: 2069008476}
   m_Layer: 0
   m_Name: Enemy (2)
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99550,7 +99552,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

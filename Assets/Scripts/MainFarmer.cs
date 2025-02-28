@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class MainFarmer : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private float multiplierSpeed = 6;
     [SerializeField] private float regularSpeed = 3;
     public bool multiply = false;
+    public bool light = false;
 
     private Vector2 direction;
     [SerializeField] private Transform point;
@@ -287,6 +287,11 @@ public class MainFarmer : MonoBehaviour
         } else {
             hat = false;
         }
+        if(equipmentSet.GetEquipmentSetItem(1).itemType == Item.ItemType.Lantern){
+            light = true;
+        } else {
+            light = false;
+        }
         if(equipmentSet.GetEquipmentSetItem(2).itemType == Item.ItemType.Shoes){
             multiply = true;
         }else { 
@@ -297,8 +302,9 @@ public class MainFarmer : MonoBehaviour
     public void Death(){
         if(hat == true){
             equipmentSet.UnequipItem(0, true);
+            equipmentSet.UnequipItem(1, true);
         }else{
-            Destroy(gameObject);
+            MainManager.Instance.died = true;
         }
     }
 
@@ -310,10 +316,6 @@ public class MainFarmer : MonoBehaviour
     public Inventory GetInventory {get {return inventory;}}
 
 }
-
-
-
-
 
 // using System.Collections;
 // using System.Collections.Generic;

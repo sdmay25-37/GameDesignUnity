@@ -13,6 +13,8 @@ public class MainManager : MonoBehaviour
     public bool inventoryInit = false;
     public bool equipmentInit = false;
 
+    public bool died = false;
+
     private void Awake(){
         if (Instance != null){
             Destroy(gameObject);
