@@ -169,7 +169,7 @@ public class MainFarmer : MonoBehaviour
             Debug.Log("Got Layers");
             ContactFilter2D filter = new ContactFilter2D().NoFilter();
             //filter.layerMask = LayerMask.GetMask("NPC");
-            Collider2D[] colliders = new Collider2D[1];
+            Collider2D[] colliders = new Collider2D[5];
             if (playerCollider.OverlapCollider(filter, colliders) == 0)
             {
                 Debug.Log("No Colliders");
@@ -178,11 +178,15 @@ public class MainFarmer : MonoBehaviour
 
             foreach (Collider2D collider in colliders)
             {
+                if(collider == null)
+                        continue;
+
                 NPCReactor reactor;
                 reactor = collider.gameObject.GetComponent<NPCReactor>();
                 if (reactor != null)
                 {
                     reactor.Interact();
+                    Debug.Log("Interacting");
                 }
                 else
                 {
