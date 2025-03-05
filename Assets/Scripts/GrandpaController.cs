@@ -3,58 +3,57 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class WitchController : NPCController
+public class GrandpaController : NPCController
 {
-    private WITCHSTATE state;
-    [SerializeField] private TextMeshProUGUI dialog; 
+    private GRANDPASTATE state;
+    [SerializeField] private TextMeshProUGUI dialog;
 
-    // Start is called before the first frame update
     void Start()
     {
-        state = WITCHSTATE.Idle;
+        state = GRANDPASTATE.Idle;
     }
 
     override public void Interaction()
     {
         switch (state)
-        { 
-            case WITCHSTATE.Idle:
+        {
+            case GRANDPASTATE.Idle:
                 popup.gameObject.SetActive(true);
                 DialogIntro();
-                state = WITCHSTATE.Talking;
+                state = GRANDPASTATE.Talking;
                 break;
-            case WITCHSTATE.Talking:
+            case GRANDPASTATE.Talking:
                 DialogMain();
-                state = WITCHSTATE.Goodbye;
+                state = GRANDPASTATE.Goodbye;
                 break;
-            case WITCHSTATE.Goodbye:
+            case GRANDPASTATE.Goodbye:
                 popup.gameObject.SetActive(false);
-                state = WITCHSTATE.Idle;
+                state = GRANDPASTATE.Idle;
                 break;
-            default: 
+            default:
                 break;
         }
     }
 
     private void DialogIntro()
     {
-        string message = "Hello there farmer.";
+        string message = "Grandson is that you? I didn't think you'd find me out here.";
         StartCoroutine(SwitchText(message));
     }
 
     private void DialogMain()
     {
-        string message = "Heading into the forest? I'd be careful if I were you, awful things lurk in the shadows.";
+        string message = "I don't have time to explain, but you are the only one that can defeat the shadows. To be continued....";
         StartCoroutine(SwitchText(message));
     }
 
     private IEnumerator SwitchText(string text)
     {
-        for(int i = 1; i <= text.Length; i++)
+        for (int i = 1; i <= text.Length; i++)
         {
             dialog.SetText(text.Substring(0, i));
             yield return new WaitForSeconds(0.05f);
-            if (i != text.Length && IsPunctuation(text.Substring(i-1, 1)))
+            if (i != text.Length && IsPunctuation(text.Substring(i - 1, 1)))
             {
                 yield return new WaitForSeconds(0.35f);
             }
@@ -63,18 +62,13 @@ public class WitchController : NPCController
 
     private bool IsPunctuation(string character)
     {
-        if(character == "." || character == "," || character == "!" || character == "?")
-        {
-            return true;
-        }
-        return false;
+        return character == "." || character == "," || character == "!" || character == "?";
     }
 
-    enum WITCHSTATE
+    enum GRANDPASTATE
     {
         Idle,
         Talking,
         Goodbye
     }
-
 }
