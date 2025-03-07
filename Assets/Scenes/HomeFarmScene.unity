@@ -25524,6 +25524,8 @@ MonoBehaviour:
   seed1: {fileID: 4780903288873104255, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   seed2: {fileID: -910092549403018386, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   seed3: {fileID: 221524225039350300, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
+  seed4: {fileID: -30672692, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  seed5: {fileID: 419733735, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
 --- !u!4 &487919020
 Transform:
   m_ObjectHideFlags: 0
@@ -32597,6 +32599,7 @@ MonoBehaviour:
     amount: 0
   inventoryInit: 0
   equipmentInit: 0
+  died: 0
 --- !u!4 &744585264
 Transform:
   m_ObjectHideFlags: 0

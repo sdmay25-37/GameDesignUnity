@@ -833,6 +833,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &572907590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572907592}
+  - component: {fileID: 572907591}
+  m_Layer: 0
+  m_Name: SeedSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &572907591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad13e0289bddf1646bcadb74b944c44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &572907592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.079283476, y: -1.3075656, z: -0.0063011753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766906995
 GameObject:
   m_ObjectHideFlags: 0
@@ -75471,7 +75515,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360.00003
   m_PointLightOuterAngle: 360.00003
   m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 6
+  m_PointLightOuterRadius: 50
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -99463,13 +99507,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemObject: {fileID: 7789002244926087502, guid: b245c986f3d92cd4d99bdf1f938a44b8, type: 3}
   gPaHat: {fileID: -1222707457, guid: 5d046885ce56c2b4db4774e9db331550, type: 3}
-  normalLantern: {fileID: 1125022499, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  normalLantern: {fileID: -1549110363, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   coin: {fileID: -1158198841, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
   empty: {fileID: 0}
-  seed1: {fileID: 21300000, guid: 76d29784383e9fa4e93f229887e70325, type: 3}
-  seed2: {fileID: 0}
-  seed3: {fileID: 0}
+  seed1: {fileID: -7763475090823894447, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
+  seed2: {fileID: -30672692, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  seed3: {fileID: 1125022499, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  seed4: {fileID: 1125022499, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  seed5: {fileID: -562987446, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
 --- !u!4 &1881668188
 Transform:
   m_ObjectHideFlags: 0
@@ -141933,3 +141979,4 @@ SceneRoots:
   - {fileID: 800709842}
   - {fileID: 1881668188}
   - {fileID: 432534233}
+  - {fileID: 572907592}

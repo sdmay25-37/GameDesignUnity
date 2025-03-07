@@ -10,6 +10,8 @@ public class Item {
         Seed1,
         Seed2,
         Seed3,
+        Seed4,
+        Seed5,
         Coin,
         Lantern,
         Hat,
@@ -27,6 +29,8 @@ public class Item {
                 case ItemType.Seed1: return ItemAssets.Instance.seed1;
                 case ItemType.Seed2: return ItemAssets.Instance.seed2;
                 case ItemType.Seed3: return ItemAssets.Instance.seed3;
+                case ItemType.Seed4: return ItemAssets.Instance.seed4;
+                case ItemType.Seed5: return ItemAssets.Instance.seed5;
                 case ItemType.Lantern: return ItemAssets.Instance.normalLantern;
                 case ItemType.Hat: return ItemAssets.Instance.gPaHat;
                 case ItemType.Shoes: return ItemAssets.Instance.shoes;
@@ -45,6 +49,10 @@ public class Item {
             case ItemType.Seed2:
                 return true;   
             case ItemType.Seed3:
+                return true;
+            case ItemType.Seed4:
+                return true;
+            case ItemType.Seed5:
                 return true;
             default:
                 return false;

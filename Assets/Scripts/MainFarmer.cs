@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainFarmer : MonoBehaviour
 {
@@ -314,7 +313,6 @@ public class MainFarmer : MonoBehaviour
     }
 
     public Inventory GetInventory {get {return inventory;}}
-
 }
 
 // using System.Collections;
