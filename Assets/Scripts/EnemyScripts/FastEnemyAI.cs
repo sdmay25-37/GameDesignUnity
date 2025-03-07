@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class FastEnemyAI : MonoBehaviour
 {
     public Transform player;
     public List<LightArea> lightAreas;
-    public float moveSpeed = 0.1f;
+    public float moveSpeed = 0.2f;
 
     private Pathfinding pathfinding;
     private TargetCalculator targetCalculator;
     private List<Vector2> path;
     private int currentPathIndex;
 
-    public float attackRadius = 5.0f;
+    public float attackRadius = 4.0f;
     private Vector2 roamingTarget;
     private float roamTimer = 0f;      // Timer to trigger a new roaming target
     private float roamInterval = 3f;   // Time interval between picking new roaming targets
@@ -171,4 +171,5 @@ public class EnemyAI : MonoBehaviour
     {
         return new List<LightArea>(lightAreas);
     }
+
 }
