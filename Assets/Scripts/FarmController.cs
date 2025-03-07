@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -61,7 +62,7 @@ public class FarmController : MonoBehaviour
             if (farm.timer > 0) continue; 
 
             // Reset the timer for the next growth stage
-            farm.timer = Random.Range(minGrowthTime, maxGrowthTime);
+            farm.timer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime);
 
             if (farm.farmstate >= (int)FARMSTATE.FLOWER)
             {
@@ -91,7 +92,7 @@ public class FarmController : MonoBehaviour
         if (map.GetTile(spot) == tiles[(int)FARMSTATE.EMPTY])
         {
             Debug.Log($"Tile at {spot} in '{name}' is EMPTY. Planting SEED.");
-            float initialTimer = Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
+            float initialTimer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
             activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer));
             map.SetTile(spot, tiles[(int)FARMSTATE.SEED]);
             status = 1;

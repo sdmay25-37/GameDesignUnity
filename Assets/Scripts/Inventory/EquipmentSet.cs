@@ -44,4 +44,16 @@ public class EquipmentSet {
     public Item GetEquipmentSetItem(int index){
         return equipmentSetList[index];
     }
+
+    public Item.ItemType hasSeeds(){
+        Item holding = GetEquipmentSetItem(1);
+        switch (holding.itemType){
+            case Item.ItemType.Seed1: return Item.ItemType.Seed1;
+            case Item.ItemType.Seed2: return Item.ItemType.Seed2;
+            case Item.ItemType.Seed3: return Item.ItemType.Seed3;
+            case Item.ItemType.Seed4: return Item.ItemType.Seed4;
+            case Item.ItemType.Seed5: return Item.ItemType.Seed5;
+            default: return Item.ItemType.Empty;
+        }
+    }
 }

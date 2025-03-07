@@ -61,7 +61,7 @@ public class Item {
 
     public bool isEquipment(){
         switch (itemType){
-            case ItemType.Hat or ItemType.Shoes or ItemType.Lantern:
+            case ItemType.Hat or ItemType.Shoes or ItemType.Lantern or ItemType.Seed1 or ItemType.Seed2 or ItemType.Seed3 or ItemType.Seed4 or ItemType.Seed5:
                 return true;
             default:
                 return false;

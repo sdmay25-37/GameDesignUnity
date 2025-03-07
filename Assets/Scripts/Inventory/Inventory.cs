@@ -11,11 +11,11 @@ public class Inventory {
         itemList = MainManager.Instance.itemList;
         if(!MainManager.Instance.inventoryInit){
             MainManager.Instance.inventoryInit = true;
-            AddItem(new Item {itemType = Item.ItemType.Seed1, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Seed2, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Seed3, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Seed4, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Seed5, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed1, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed2, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed3, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed4, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed5, amount = 1});
 
             // AddItem(new Item {itemType = Item.ItemType.Coin, amount = 0});
             AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
