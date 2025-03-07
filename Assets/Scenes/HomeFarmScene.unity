@@ -33571,6 +33571,8 @@ GameObject:
   - component: {fileID: 1167416727}
   - component: {fileID: 1167416726}
   - component: {fileID: 1167416725}
+  - component: {fileID: 1167416728}
+  - component: {fileID: 1167416729}
   m_Layer: 0
   m_Name: MainFarmer
   m_TagString: Player
@@ -33673,6 +33675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9390ff08575fda49847fd3696b3c205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 1167416729}
   playerCollider: {fileID: 1167416720}
   multiplierSpeed: 6
   regularSpeed: 3
@@ -33763,6 +33766,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1167416728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167416719}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60a831dfb95429478261bad451e6dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1167416729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167416719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0721cd29c248f043aebfa0bb1ca450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lantern: {fileID: 1365490154331659046, guid: 94b5a3ff98b12bf48b36478143ff12ec, type: 3}
+  trap: {fileID: 158860730711966546, guid: 8e824b973c701d346aa26643ef70b9c7, type: 3}
 --- !u!1 &1299396052
 GameObject:
   m_ObjectHideFlags: 0

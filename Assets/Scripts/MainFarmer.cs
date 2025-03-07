@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class MainFarmer : MonoBehaviour
 {
+    [SerializeField] private PlaceablesSpawner spawner;
     [SerializeField] private Collider2D playerCollider;
 
     // Speed vars
@@ -108,8 +110,18 @@ public class MainFarmer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Talking");
             Talk();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && inventory.GetItemCount(Item.ItemType.Trap) > 0)
+        {
+            spawner.SpawnTrap(transform);
+            inventory.RemoveItem(new Item { itemType = Item.ItemType.Trap, amount = 1 });
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && inventory.GetItemCount(Item.ItemType.Lantern) > 0)
+        {
+            spawner.SpawnLantern(transform);
+            inventory.RemoveItem(new Item { itemType = Item.ItemType.Lantern, amount = 1 });
         }
 
         // Update animator parameters for movement
