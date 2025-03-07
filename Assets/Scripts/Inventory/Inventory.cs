@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Inventory {
 
+    public static Inventory inventory = null;
     public event EventHandler OnItemListChanged;
     private List<Item> itemList;
-    public Inventory(){
+    public Inventory(){        
         itemList = new List<Item>();
 
         AddItem(new Item {itemType = Item.ItemType.Seed1, amount = 4});
@@ -15,6 +16,8 @@ public class Inventory {
         AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.Hat, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.Shoes, amount = 1});
+
+        inventory = this;
     }
 
     public void AddItem(Item item){
@@ -69,6 +72,22 @@ public class Inventory {
             }
         }
         return false;
+    }
+    public int GetItemCount(Item.ItemType itemType)
+    {
+        foreach (Item inventoryItem in itemList)
+        {
+            if (inventoryItem.itemType == itemType)
+            {
+                return inventoryItem.amount;
+            }
+        }
+        return 0;
+    }
+
+    public static Inventory GetInventory()
+    {
+        return inventory;
     }
 
 }

@@ -3,7 +3,16 @@ guid: 80ef4e145d17f8f4d9aa607d6b1c1f1f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pfItemObject: {instanceID: 0}
+  - gPaHat: {instanceID: 0}
+  - normalLantern: {fileID: 21300000, guid: d29a57c8aa01947458b4892056b9addf, type: 3}
+  - coin: {instanceID: 0}
+  - shoes: {instanceID: 0}
+  - empty: {instanceID: 0}
+  - seed1: {fileID: -1988590680, guid: e3e0c0f7a52111c44b81579ed402cca3, type: 3}
+  - seed2: {instanceID: 0}
+  - seed3: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
