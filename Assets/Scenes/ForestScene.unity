@@ -99509,7 +99509,7 @@ MonoBehaviour:
   gPaHat: {fileID: -1222707457, guid: 5d046885ce56c2b4db4774e9db331550, type: 3}
   normalLantern: {fileID: -1549110363, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   coin: {fileID: -1158198841, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
-  shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
+  shoes: {fileID: 21300000, guid: 5e31c88ec3a7b6048a4d320be9110ea4, type: 3}
   empty: {fileID: 0}
   seed1: {fileID: -7763475090823894447, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   seed2: {fileID: -30672692, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
