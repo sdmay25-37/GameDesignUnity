@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEditor;
 using System.Linq;
+using System.Diagnostics.Tracing;
 
 public class EquipmentSet {
     public EventHandler OnEquipmentListChanged;
@@ -19,9 +20,12 @@ public class EquipmentSet {
         }
     }
 
-    public void EquipItem(Item item, int index){
+    public Item.ItemType EquipItem(Item item, int index){
+        Item current = GetEquipmentSetItem(index);
+        UnequipItem(index);
         equipmentSetList[index] = item;
         OnEquipmentListChanged?.Invoke(this, EventArgs.Empty);
+        return current.itemType;
     }
 
     public void UnequipItem(int index, bool destroy = false){

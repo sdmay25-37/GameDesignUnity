@@ -14,6 +14,8 @@ public class FarmController : MonoBehaviour
     [SerializeField]
     private Tile[] tiles;
 
+    private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
+
     // Tiles managed by this FarmController
     [HideInInspector] public Vector3Int[] farmTiles;
 
@@ -27,6 +29,7 @@ public class FarmController : MonoBehaviour
     {
         InitFarmTiles();
         activeTiles = new List<Farm>();
+        seedTypeTracker = new Dictionary<Vector3Int, Item.ItemType>();
         Debug.Log($"FarmController '{name}' initialized with {farmTiles.Length} tiles.");
     }
 
@@ -118,6 +121,26 @@ public class FarmController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public bool IsEmpty(Vector3Int spot){
+        if(map.GetTile(spot) == tiles[(int)FARMSTATE.EMPTY])
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void setSeedTypeAtPos(Item.ItemType type, Vector3Int loc){
+        seedTypeTracker[loc] = type;
+    }
+
+    public Item.ItemType getSeedTypeAtPos(Vector3Int loc, Boolean remove = false){
+        Item.ItemType type = seedTypeTracker[loc];
+        if (remove){
+            seedTypeTracker.Remove(loc);
+        }
+        return type;
     }
 }
 

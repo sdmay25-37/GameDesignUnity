@@ -43,7 +43,7 @@ public class Item {
             case ItemType.Coin:
                 return true;
             case ItemType.Lantern:
-                return false;
+                return true;
             case ItemType.Seed1:
                 return true;
             case ItemType.Seed2:

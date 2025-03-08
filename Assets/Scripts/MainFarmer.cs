@@ -12,7 +12,7 @@ public class MainFarmer : MonoBehaviour
     public bool multiply = false;
     public bool light = false;
 
-    private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
+    // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
 
     private Vector2 direction;
     [SerializeField] private Transform point;
@@ -45,9 +45,6 @@ public class MainFarmer : MonoBehaviour
         equipmentSet = new EquipmentSet();
         uiInventory.SetInventory(inventory);
         uiInventory.SetEquipmentSet(equipmentSet);
-
-        seedTypeTracker = new Dictionary<Vector3Int, Item.ItemType>();
-
         
         // If you want it to spawn an item- uncomment this
         // ItemObject.CreateItemObject(new Vector3(0,1,0), new Item{itemType=Item.ItemType.Seed1});
@@ -145,9 +142,9 @@ public class MainFarmer : MonoBehaviour
                 // check if there are seeds.
                 // if (tile.Equals(pos) & inventory.hasSeeds(new Item{itemType=Item.ItemType.Seed1}) && !controller.IsFlower(pos))
                 Item.ItemType type = equipmentSet.hasSeeds();
-                if (tile.Equals(pos) & (type != Item.ItemType.Empty) && !controller.IsFlower(pos))
+                if (tile.Equals(pos) & (type != Item.ItemType.Empty) & controller.IsEmpty(pos))
                 {
-                    plant(pos, type);
+                    plant(controller, pos, type);
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
                     StartCoroutine(MouseCoolDown());
@@ -157,7 +154,7 @@ public class MainFarmer : MonoBehaviour
                 {
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
-                    collect(pos);
+                    collect(controller, pos);
                     StartCoroutine(MouseCoolDown());
                     return;
                 }
@@ -320,19 +317,18 @@ public class MainFarmer : MonoBehaviour
 
     public Inventory GetInventory {get {return inventory;}}
 
-    private void plant(Vector3Int loc, Item.ItemType type){
+    private void plant(FarmController controller, Vector3Int loc, Item.ItemType type){
         if (inventory.hasSeeds(new Item{itemType=type })){
             inventory.RemoveItem(new Item{itemType=type });
         }else{
             equipmentSet.UnequipItem(1);
             inventory.RemoveItem(new Item{itemType=type });
         }
-        seedTypeTracker[loc] = type;
+        controller.setSeedTypeAtPos(type, loc);
     }
 
-    private void collect(Vector3Int loc){
-        // Debug.Log($"Item type: {seedTypeTracker[loc]}");
-        inventory.AddItem(new Item { itemType = seedTypeTracker[loc], amount = 2});
+    private void collect(FarmController controller, Vector3Int loc){
+        inventory.AddItem(new Item { itemType = controller.getSeedTypeAtPos(loc), amount = 2});
     }
 
 }
