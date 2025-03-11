@@ -7,6 +7,8 @@ public class FarmController : MonoBehaviour
     [SerializeField] private float minGrowthTime = 2f; // Minimum growth time
     [SerializeField] private float maxGrowthTime = 5f; // Maximum growth time
 
+    [SerializeField] public AudioClip plantAudio; //Audio test
+
     [SerializeField]
     private Tilemap map;
 
@@ -90,12 +92,15 @@ public class FarmController : MonoBehaviour
 
         if (map.GetTile(spot) == tiles[(int)FARMSTATE.EMPTY])
         {
+            SoundManager.Instance.PlaySFX(plantAudio); //Audio
+
             Debug.Log($"Tile at {spot} in '{name}' is EMPTY. Planting SEED.");
             float initialTimer = Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
             activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer));
             map.SetTile(spot, tiles[(int)FARMSTATE.SEED]);
             status = 1;
-            
+
+
         }
         else if (map.GetTile(spot) == tiles[(int)FARMSTATE.FLOWER])
         {

@@ -10,7 +10,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Vector3 spawnPosition; // Where the player spawns in the target scene
     [SerializeField] private GameObject blackout;
 
-    [SerializeField] public AudioClip jumpSound; //Audio
+    [SerializeField] public AudioClip jumpSound; //Audio test
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
