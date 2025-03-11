@@ -10,6 +10,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Vector3 spawnPosition; // Where the player spawns in the target scene
     [SerializeField] private GameObject blackout;
 
+    [SerializeField] public AudioClip jumpSound; //Audio
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -19,6 +20,7 @@ public class SceneTransition : MonoBehaviour
             PlayerPrefs.SetFloat("SpawnY", spawnPosition.y);
             PlayerPrefs.SetFloat("SpawnZ", spawnPosition.z);
             PlayerPrefs.Save();
+            SoundManager.Instance.PlaySFX(jumpSound);
             StartCoroutine(FadeOutForest());
         }
     }
