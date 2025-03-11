@@ -32775,6 +32775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGrowthTime: 1
   maxGrowthTime: 1
+  plantAudio: {fileID: 0}
+  harvestAudio: {fileID: 0}
   map: {fileID: 262468848}
   tiles:
   - {fileID: 11400000, guid: abdf8a659979c69498624ab1c72f5fc9, type: 2}
@@ -32829,6 +32831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGrowthTime: 1
   maxGrowthTime: 1
+  plantAudio: {fileID: 8300000, guid: 454ab824afa5f5840be2455704ed04c3, type: 3}
+  harvestAudio: {fileID: 8300000, guid: 2e0258d4a3868c74d901c07ae2ce80d9, type: 3}
   map: {fileID: 1130635969}
   tiles:
   - {fileID: 11400000, guid: abdf8a659979c69498624ab1c72f5fc9, type: 2}
@@ -37893,6 +37897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGrowthTime: 1
   maxGrowthTime: 1
+  plantAudio: {fileID: 0}
+  harvestAudio: {fileID: 0}
   map: {fileID: 1299396055}
   tiles:
   - {fileID: 11400000, guid: abdf8a659979c69498624ab1c72f5fc9, type: 2}
@@ -38081,5 +38087,4 @@ SceneRoots:
   - {fileID: 487919020}
   - {fileID: 2064208814}
   - {fileID: 1705018464}
-  - {fileID: 744585264}
   - {fileID: 103915223}

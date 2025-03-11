@@ -8,6 +8,8 @@ public class FarmController : MonoBehaviour
     [SerializeField] private float maxGrowthTime = 5f; // Maximum growth time
 
     [SerializeField] public AudioClip plantAudio; //Audio test
+    [SerializeField] public AudioClip harvestAudio; //Audio test
+
 
     [SerializeField]
     private Tilemap map;
@@ -104,6 +106,7 @@ public class FarmController : MonoBehaviour
         }
         else if (map.GetTile(spot) == tiles[(int)FARMSTATE.FLOWER])
         {
+            SoundManager.Instance.PlaySFX(harvestAudio); //Audio
             Debug.Log($"Tile at {spot} in '{name}' is FLOWER. Resetting to EMPTY.");
             map.SetTile(spot, tiles[(int)FARMSTATE.EMPTY]);
             status = 2;
