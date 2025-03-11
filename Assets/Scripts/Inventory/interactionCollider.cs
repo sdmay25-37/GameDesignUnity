@@ -15,13 +15,10 @@ public class interactionCollider : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other == bodyCollider){
-            interact(other.gameObject);
-        }
+        interact(other.gameObject);
     }
 
     private void interact(GameObject other){
-        
         switch (other.tag){
             case "Monster":
                 Debug.Log("You died");

@@ -8,13 +8,22 @@ public class Inventory {
     public event EventHandler OnItemListChanged;
     private List<Item> itemList;
     public Inventory(){
-        itemList = new List<Item>();
+        itemList = MainManager.Instance.itemList;
+        if(!MainManager.Instance.inventoryInit){
+            MainManager.Instance.inventoryInit = true;
+            AddItem(new Item {itemType = Item.ItemType.Seed1, amount = 4});
+            // AddItem(new Item {itemType = Item.ItemType.Seed2, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed3, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed4, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Seed5, amount = 1});
 
-        AddItem(new Item {itemType = Item.ItemType.Seed1, amount = 4});
-        AddItem(new Item {itemType = Item.ItemType.Coin, amount = 3});
-        AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Hat, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Shoes, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Coin, amount = 0});
+            AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
+            AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
+            AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
+            AddItem(new Item {itemType = Item.ItemType.Hat, amount = 1});
+            AddItem(new Item {itemType = Item.ItemType.Shoes, amount = 1});
+        }
     }
 
     public void AddItem(Item item){

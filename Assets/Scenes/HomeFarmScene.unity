@@ -25517,13 +25517,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemObject: {fileID: 7789002244926087502, guid: b245c986f3d92cd4d99bdf1f938a44b8, type: 3}
   gPaHat: {fileID: -1222707457, guid: 5d046885ce56c2b4db4774e9db331550, type: 3}
-  normalLantern: {fileID: -6329420634031446844, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
+  normalLantern: {fileID: -1549110363, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   coin: {fileID: 1290532464073988732, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
-  shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
+  shoes: {fileID: 21300000, guid: ecc2b88e4aaf974418019600ad15e1b5, type: 3}
   empty: {fileID: 0}
   seed1: {fileID: 4780903288873104255, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   seed2: {fileID: -910092549403018386, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   seed3: {fileID: 221524225039350300, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
+  seed4: {fileID: -30672692, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  seed5: {fileID: 419733735, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
 --- !u!4 &487919020
 Transform:
   m_ObjectHideFlags: 0
@@ -32558,6 +32560,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &744585262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744585264}
+  - component: {fileID: 744585263}
+  m_Layer: 0
+  m_Name: MainManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &744585263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744585262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c347e4babcb1bc644b0bbb8357830f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemList: []
+  equipmentSetList:
+  - itemType: 0
+    amount: 0
+  - itemType: 0
+    amount: 0
+  - itemType: 0
+    amount: 0
+  inventoryInit: 0
+  equipmentInit: 0
+  died: 0
+--- !u!4 &744585264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744585262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0374587, y: 1.2233622, z: -0.06983403}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040998891
 GameObject:
   m_ObjectHideFlags: 0
@@ -33046,6 +33103,7 @@ GameObject:
   - component: {fileID: 1167416721}
   - component: {fileID: 1167416720}
   - component: {fileID: 1167416727}
+  - component: {fileID: 1167416728}
   - component: {fileID: 1167416726}
   - component: {fileID: 1167416725}
   m_Layer: 0
@@ -33084,7 +33142,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.15}
@@ -33154,6 +33212,7 @@ MonoBehaviour:
   multiplierSpeed: 6
   regularSpeed: 3
   multiply: 0
+  light: 0
   point: {fileID: 1538304952}
   controllers:
   - {fileID: 1040998892}
@@ -33212,7 +33271,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167416719}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -33240,6 +33299,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1167416728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167416719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c755eb45a59ffb249b88cec06e0c72fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyCollider: {fileID: 1167416720}
 --- !u!1 &1299396052
 GameObject:
   m_ObjectHideFlags: 0
@@ -33790,7 +33862,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 10
+  m_PointLightOuterRadius: 7
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -37840,3 +37912,4 @@ SceneRoots:
   - {fileID: 487919020}
   - {fileID: 2064208814}
   - {fileID: 1705018464}
+  - {fileID: 744585264}

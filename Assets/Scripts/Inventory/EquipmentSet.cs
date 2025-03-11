@@ -4,21 +4,28 @@ using UnityEngine;
 using System;
 using UnityEditor;
 using System.Linq;
+using System.Diagnostics.Tracing;
 
 public class EquipmentSet {
     public EventHandler OnEquipmentListChanged;
     private Item[] equipmentSetList;
 
     public EquipmentSet(){
-        equipmentSetList = new Item[3];
-        equipmentSetList[0] = new Item {itemType = Item.ItemType.Empty};
-        equipmentSetList[1] = new Item {itemType = Item.ItemType.Empty};
-        equipmentSetList[2] = new Item {itemType = Item.ItemType.Empty};
+        equipmentSetList = MainManager.Instance.equipmentSetList;
+        if (!MainManager.Instance.equipmentInit){
+            MainManager.Instance.equipmentInit = true;
+            equipmentSetList[0] = new Item {itemType = Item.ItemType.Empty};
+            equipmentSetList[1] = new Item {itemType = Item.ItemType.Empty};
+            equipmentSetList[2] = new Item {itemType = Item.ItemType.Empty};
+        }
     }
 
-    public void EquipItem(Item item, int index){
+    public Item.ItemType EquipItem(Item item, int index){
+        Item current = GetEquipmentSetItem(index);
+        UnequipItem(index);
         equipmentSetList[index] = item;
         OnEquipmentListChanged?.Invoke(this, EventArgs.Empty);
+        return current.itemType;
     }
 
     public void UnequipItem(int index, bool destroy = false){
@@ -40,5 +47,17 @@ public class EquipmentSet {
 
     public Item GetEquipmentSetItem(int index){
         return equipmentSetList[index];
+    }
+
+    public Item.ItemType hasSeeds(){
+        Item holding = GetEquipmentSetItem(1);
+        switch (holding.itemType){
+            case Item.ItemType.Seed1: return Item.ItemType.Seed1;
+            case Item.ItemType.Seed2: return Item.ItemType.Seed2;
+            case Item.ItemType.Seed3: return Item.ItemType.Seed3;
+            case Item.ItemType.Seed4: return Item.ItemType.Seed4;
+            case Item.ItemType.Seed5: return Item.ItemType.Seed5;
+            default: return Item.ItemType.Empty;
+        }
     }
 }

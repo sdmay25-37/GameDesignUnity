@@ -1,21 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class FastEnemyAI : MonoBehaviour
 {
     public Transform player;
     public List<LightArea> lightAreas;
-    public float moveSpeed = 0.1f;
+    public float moveSpeed = 0.2f;
 
     private Pathfinding pathfinding;
     private TargetCalculator targetCalculator;
     private List<Vector2> path;
     private int currentPathIndex;
 
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
-
-    public float attackRadius = 7.0f;
+    public float attackRadius = 4.0f;
     private Vector2 roamingTarget;
     private float roamTimer = 0f;      // Timer to trigger a new roaming target
     private float roamInterval = 3f;   // Time interval between picking new roaming targets
@@ -29,8 +26,6 @@ public class EnemyAI : MonoBehaviour
         targetCalculator = new TargetCalculator();
         path = new List<Vector2>();
         currentPathIndex = 0;
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -75,22 +70,8 @@ public class EnemyAI : MonoBehaviour
         if (path != null && path.Count > 0 && currentPathIndex < path.Count)
         {
             Vector2 targetPosition = path[currentPathIndex];
-            Vector2 movementDirection = (targetPosition - (Vector2)transform.position).normalized;
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-            // Set animation parameter
-            animator.SetFloat("MoveX", Mathf.Abs(movementDirection.x));
-
-            // Flip sprite if moving left
-            if (movementDirection.x < 0)
-            {
-                spriteRenderer.flipX = true;  // Flip the sprite for left movement
-            }
-            else if (movementDirection.x > 0)
-            {
-                spriteRenderer.flipX = false; // Keep the sprite normal for right movement
-            }
 
             if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
             {
@@ -101,7 +82,6 @@ public class EnemyAI : MonoBehaviour
         {
             path = null;
             currentPathIndex = 0;
-            animator.SetFloat("MoveX", 0);  // Stop animation when idle
         }
     }
 
