@@ -78,11 +78,8 @@ public class UI_Inventory : MonoBehaviour
             {
                 // Use item
                 if(item.isEquipment()){
-                    Item.ItemType currentItemType = equipmentSet.EquipItem(item, equipmentSet.GetEquipmentSlot(item));
+                    equipmentSet.EquipItem(item, equipmentSet.GetEquipmentSlot(item));
                     inventory.RemoveItem(item);
-                    if (currentItemType != Item.ItemType.Empty){
-                        inventory.AddItem(new Item {itemType=currentItemType, amount = 1});
-                    }
                 }
             };
             clickHandler.RightClickFunc = () =>
@@ -132,8 +129,7 @@ public class UI_Inventory : MonoBehaviour
                 {
                     // Unequip Item and add it back to the inventory
                     if(equipmentSet.GetEquipmentSetItem(temp).itemType != Item.ItemType.Empty){
-                        Item transerItem = equipmentSet.GetEquipmentSetItem(temp);
-                        inventory.AddItem(new Item{itemType = transerItem.itemType, amount=1});
+                        inventory.AddItem(equipmentSet.GetEquipmentSetItem(temp));
                         equipmentSet.UnequipItem(temp);
                     }
                 };

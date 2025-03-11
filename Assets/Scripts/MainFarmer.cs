@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MainFarmer : MonoBehaviour
 {
@@ -10,9 +12,6 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private float multiplierSpeed = 6;
     [SerializeField] private float regularSpeed = 3;
     public bool multiply = false;
-    public bool light = false;
-
-    // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
 
     private Vector2 direction;
     [SerializeField] private Transform point;
@@ -45,6 +44,7 @@ public class MainFarmer : MonoBehaviour
         equipmentSet = new EquipmentSet();
         uiInventory.SetInventory(inventory);
         uiInventory.SetEquipmentSet(equipmentSet);
+
         
         // If you want it to spawn an item- uncomment this
         // ItemObject.CreateItemObject(new Vector3(0,1,0), new Item{itemType=Item.ItemType.Seed1});
@@ -140,11 +140,9 @@ public class MainFarmer : MonoBehaviour
             foreach (Vector3Int tile in controller.farmTiles)
             {
                 // check if there are seeds.
-                // if (tile.Equals(pos) & inventory.hasSeeds(new Item{itemType=Item.ItemType.Seed1}) && !controller.IsFlower(pos))
-                Item.ItemType type = equipmentSet.hasSeeds();
-                if (tile.Equals(pos) & (type != Item.ItemType.Empty) & controller.IsEmpty(pos))
+                if (tile.Equals(pos) & inventory.hasSeeds(new Item{itemType=Item.ItemType.Seed1}) && !controller.IsFlower(pos))
                 {
-                    plant(controller, pos, type);
+                    inventory.RemoveItem(new Item{itemType=Item.ItemType.Seed1 });
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
                     StartCoroutine(MouseCoolDown());
@@ -152,9 +150,9 @@ public class MainFarmer : MonoBehaviour
                 }
                 else if (tile.Equals(pos) && controller.IsFlower(pos))
                 {
+                    inventory.AddItem(new Item { itemType = Item.ItemType.Seed1, amount = 2});
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
-                    collect(controller, pos);
                     StartCoroutine(MouseCoolDown());
                     return;
                 }
@@ -289,11 +287,6 @@ public class MainFarmer : MonoBehaviour
         } else {
             hat = false;
         }
-        if(equipmentSet.GetEquipmentSetItem(1).itemType == Item.ItemType.Lantern){
-            light = true;
-        } else {
-            light = false;
-        }
         if(equipmentSet.GetEquipmentSetItem(2).itemType == Item.ItemType.Shoes){
             multiply = true;
         }else { 
@@ -305,8 +298,7 @@ public class MainFarmer : MonoBehaviour
         if(hat == true){
             equipmentSet.UnequipItem(0, true);
         }else{
-            equipmentSet.UnequipItem(1, true);
-            MainManager.Instance.died = true;
+            Destroy(gameObject);
         }
     }
 
@@ -317,21 +309,11 @@ public class MainFarmer : MonoBehaviour
 
     public Inventory GetInventory {get {return inventory;}}
 
-    private void plant(FarmController controller, Vector3Int loc, Item.ItemType type){
-        if (inventory.hasSeeds(new Item{itemType=type })){
-            inventory.RemoveItem(new Item{itemType=type });
-        }else{
-            equipmentSet.UnequipItem(1);
-            inventory.RemoveItem(new Item{itemType=type });
-        }
-        controller.setSeedTypeAtPos(type, loc);
-    }
-
-    private void collect(FarmController controller, Vector3Int loc){
-        inventory.AddItem(new Item { itemType = controller.getSeedTypeAtPos(loc), amount = 2});
-    }
-
 }
+
+
+
+
 
 // using System.Collections;
 // using System.Collections.Generic;

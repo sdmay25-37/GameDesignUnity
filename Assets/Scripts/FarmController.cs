@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -14,8 +13,6 @@ public class FarmController : MonoBehaviour
     [SerializeField]
     private Tile[] tiles;
 
-    private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
-
     // Tiles managed by this FarmController
     [HideInInspector] public Vector3Int[] farmTiles;
 
@@ -29,7 +26,6 @@ public class FarmController : MonoBehaviour
     {
         InitFarmTiles();
         activeTiles = new List<Farm>();
-        seedTypeTracker = new Dictionary<Vector3Int, Item.ItemType>();
         Debug.Log($"FarmController '{name}' initialized with {farmTiles.Length} tiles.");
     }
 
@@ -65,7 +61,7 @@ public class FarmController : MonoBehaviour
             if (farm.timer > 0) continue; 
 
             // Reset the timer for the next growth stage
-            farm.timer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime);
+            farm.timer = Random.Range(minGrowthTime, maxGrowthTime);
 
             if (farm.farmstate >= (int)FARMSTATE.FLOWER)
             {
@@ -95,7 +91,7 @@ public class FarmController : MonoBehaviour
         if (map.GetTile(spot) == tiles[(int)FARMSTATE.EMPTY])
         {
             Debug.Log($"Tile at {spot} in '{name}' is EMPTY. Planting SEED.");
-            float initialTimer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
+            float initialTimer = Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
             activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer));
             map.SetTile(spot, tiles[(int)FARMSTATE.SEED]);
             status = 1;
@@ -121,26 +117,6 @@ public class FarmController : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    public bool IsEmpty(Vector3Int spot){
-        if(map.GetTile(spot) == tiles[(int)FARMSTATE.EMPTY])
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public void setSeedTypeAtPos(Item.ItemType type, Vector3Int loc){
-        seedTypeTracker[loc] = type;
-    }
-
-    public Item.ItemType getSeedTypeAtPos(Vector3Int loc, Boolean remove = false){
-        Item.ItemType type = seedTypeTracker[loc];
-        if (remove){
-            seedTypeTracker.Remove(loc);
-        }
-        return type;
     }
 }
 
