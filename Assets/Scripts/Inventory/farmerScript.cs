@@ -11,7 +11,6 @@ public class FarmerScript : MonoBehaviour
     // Start is called before the first frame update
     private bool hat = true;
 
-
     private float multiplierSpeed = 6;
 
     private float regularSpeed = 3;
@@ -133,6 +132,10 @@ public class FarmerScript : MonoBehaviour
         }else{
             Destroy(gameObject);
         }
+    }
+
+    public bool getLight(){
+        return GetComponent<Light>();
     }
 
 }
