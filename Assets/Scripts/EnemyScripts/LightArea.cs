@@ -26,7 +26,10 @@ public class LightArea : MonoBehaviour
     void Start()
     {
         light2D = GetComponent<Light2D>();
-        farmerScript = GetComponentInParent<MainFarmer>();
+        if(farmerScript == null)
+        {
+            farmerScript = GetComponentInParent<MainFarmer>();
+        } 
     }
 
     void Update()
@@ -54,5 +57,10 @@ public class LightArea : MonoBehaviour
         Handles.color = Color.yellow; // Solid yellow outline
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 #endif
+    }
+
+    public void SetFarmer(MainFarmer script)
+    {
+        farmerScript = script;
     }
 }

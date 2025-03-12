@@ -178,4 +178,9 @@ public class EnemyAI : MonoBehaviour
             sin * vector.x + cos * vector.y
         );
     }
+
+    public static void AddLight(LightArea light)
+    {
+        //lightAreas.Add(light);
+    }
 }

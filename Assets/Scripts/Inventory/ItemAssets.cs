@@ -14,6 +14,7 @@ public class ItemAssets : MonoBehaviour
     public Transform pfItemObject;
     public Sprite gPaHat;
     public Sprite normalLantern;
+    public Sprite trap;
     public Sprite coin;
     public Sprite shoes;
     public Sprite empty;

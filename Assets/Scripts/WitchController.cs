@@ -6,16 +6,23 @@ using UnityEngine;
 public class WitchController : NPCController
 {
     private WITCHSTATE state;
+    private bool talking;
     [SerializeField] private TextMeshProUGUI dialog; 
 
     // Start is called before the first frame update
     void Start()
     {
         state = WITCHSTATE.Idle;
+        talking = false;
     }
 
     override public void Interaction()
     {
+        if(talking)
+        {
+            return;
+        }
+
         switch (state)
         { 
             case WITCHSTATE.Idle:
@@ -50,6 +57,7 @@ public class WitchController : NPCController
 
     private IEnumerator SwitchText(string text)
     {
+        talking = true;
         for(int i = 1; i <= text.Length; i++)
         {
             dialog.SetText(text.Substring(0, i));
@@ -59,6 +67,7 @@ public class WitchController : NPCController
                 yield return new WaitForSeconds(0.35f);
             }
         }
+        talking = false;
     }
 
     private bool IsPunctuation(string character)

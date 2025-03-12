@@ -73488,6 +73488,7 @@ GameObject:
   - component: {fileID: 800709836}
   - component: {fileID: 800709835}
   - component: {fileID: 800709834}
+  - component: {fileID: 800709843}
   m_Layer: 0
   m_Name: MainFarmer
   m_TagString: Player
@@ -73663,7 +73664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9390ff08575fda49847fd3696b3c205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCollider: {fileID: 0}
+  spawner: {fileID: 800709843}
+  playerCollider: {fileID: 800709838}
   multiplierSpeed: 6
   regularSpeed: 3
   multiply: 0
@@ -73694,6 +73696,20 @@ Transform:
   - {fileID: 71690925}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800709843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800709833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0721cd29c248f043aebfa0bb1ca450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lantern: {fileID: 1365490154331659046, guid: 94b5a3ff98b12bf48b36478143ff12ec, type: 3}
+  trap: {fileID: 158860730711966546, guid: 8e824b973c701d346aa26643ef70b9c7, type: 3}
 --- !u!1 &857592440
 GameObject:
   m_ObjectHideFlags: 0
@@ -73743,8 +73759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 800709842}
-  lightAreas:
-  - {fileID: 1499303233}
   moveSpeed: 2
   attackRadius: 5
 --- !u!58 &857592443
@@ -99507,9 +99521,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfItemObject: {fileID: 7789002244926087502, guid: b245c986f3d92cd4d99bdf1f938a44b8, type: 3}
   gPaHat: {fileID: -1222707457, guid: 5d046885ce56c2b4db4774e9db331550, type: 3}
-  normalLantern: {fileID: -1549110363, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
-  coin: {fileID: -1158198841, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
-  shoes: {fileID: 21300000, guid: 5e31c88ec3a7b6048a4d320be9110ea4, type: 3}
+  normalLantern: {fileID: 21300000, guid: d29a57c8aa01947458b4892056b9addf, type: 3}
+  trap: {fileID: 21300000, guid: ea8ceca1156aeb243ad9dc4de32088c2, type: 3}
+  coin: {fileID: 6631717109063506053, guid: 7ead8ba5dc6d79f4da1cc2f449bde712, type: 3}
+  shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
   empty: {fileID: 0}
   seed1: {fileID: -7763475090823894447, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
   seed2: {fileID: -30672692, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
@@ -99612,7 +99627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: HomeFarmScene
-  spawnPosition: {x: 16, y: 2.5, z: 0}
+  spawnPosition: {x: 15, y: 2.5, z: 0}
   blackout: {fileID: 7224346420560469160, guid: 486f157790bfdb0468a909bd95212dcd, type: 3}
 --- !u!61 &2049712489
 BoxCollider2D:
