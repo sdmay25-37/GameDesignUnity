@@ -16,6 +16,15 @@ public class LightArea : MonoBehaviour
         return inLight;
     }
 
+    void Start()
+    {
+        light2D = GetComponent<Light2D>();
+        if(farmerScript == null)
+        {
+            farmerScript = GetComponentInParent<MainFarmer>();
+        } 
+    }
+
     // Draws the light radius as a wireframe circle in the Scene view
     private void OnDrawGizmos()
     {
@@ -29,5 +38,10 @@ public class LightArea : MonoBehaviour
         Handles.color = Color.yellow; // Solid yellow outline
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 #endif
+    }
+
+    public void SetFarmer(MainFarmer script)
+    {
+        farmerScript = script;
     }
 }
