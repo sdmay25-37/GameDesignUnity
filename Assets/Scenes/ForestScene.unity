@@ -99612,7 +99612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: HomeFarmScene
-  spawnPosition: {x: 16, y: 2.5, z: 0}
+  spawnPosition: {x: 15, y: 2.5, z: 0}
   blackout: {fileID: 7224346420560469160, guid: 486f157790bfdb0468a909bd95212dcd, type: 3}
 --- !u!61 &2049712489
 BoxCollider2D:
