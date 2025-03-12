@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 
 public class MainFarmer : MonoBehaviour
@@ -14,12 +12,15 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private float multiplierSpeed = 6;
     [SerializeField] private float regularSpeed = 3;
     public bool multiply = false;
+    public bool light = false;
+
+    // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
 
     private Vector2 direction;
     [SerializeField] private Transform point;
     [SerializeField] private List<FarmController> controllers; // List to hold multiple FarmControllers
     private bool canClick;
-    
+
     // Inventory
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
@@ -47,7 +48,6 @@ public class MainFarmer : MonoBehaviour
         uiInventory.SetInventory(inventory);
         uiInventory.SetEquipmentSet(equipmentSet);
 
-        
         // If you want it to spawn an item- uncomment this
         // ItemObject.CreateItemObject(new Vector3(0,1,0), new Item{itemType=Item.ItemType.Seed1});
 
@@ -56,7 +56,7 @@ public class MainFarmer : MonoBehaviour
         animator = transform.Find("Body").GetComponent<Animator>();
         lastMousePosition = Input.mousePosition;
 
-        
+
 
         // Check if a spawn position is saved
         if (PlayerPrefs.HasKey("SpawnX") && PlayerPrefs.HasKey("SpawnY") && PlayerPrefs.HasKey("SpawnZ"))
@@ -96,9 +96,12 @@ public class MainFarmer : MonoBehaviour
         direction.Normalize();
 
         // Move the character
-        if (multiply){
+        if (multiply)
+        {
             transform.Translate(direction * multiplierSpeed * Time.deltaTime, Space.World);
-        }else{
+        }
+        else
+        {
             transform.Translate(direction * regularSpeed * Time.deltaTime, Space.World);
         }
 
@@ -154,9 +157,11 @@ public class MainFarmer : MonoBehaviour
             foreach (Vector3Int tile in controller.farmTiles)
             {
                 // check if there are seeds.
-                if (tile.Equals(pos) & inventory.hasSeeds(new Item{itemType=Item.ItemType.Seed1}) && !controller.IsFlower(pos))
+                // if (tile.Equals(pos) & inventory.hasSeeds(new Item{itemType=Item.ItemType.Seed1}) && !controller.IsFlower(pos))
+                Item.ItemType type = equipmentSet.hasSeeds();
+                if (tile.Equals(pos) & (type != Item.ItemType.Empty) & controller.IsEmpty(pos))
                 {
-                    inventory.RemoveItem(new Item{itemType=Item.ItemType.Seed1 });
+                    plant(controller, pos, type);
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
                     StartCoroutine(MouseCoolDown());
@@ -164,9 +169,9 @@ public class MainFarmer : MonoBehaviour
                 }
                 else if (tile.Equals(pos) && controller.IsFlower(pos))
                 {
-                    inventory.AddItem(new Item { itemType = Item.ItemType.Seed1, amount = 2});
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
+                    collect(controller, pos);
                     StartCoroutine(MouseCoolDown());
                     return;
                 }
@@ -192,7 +197,7 @@ public class MainFarmer : MonoBehaviour
 
             foreach (Collider2D collider in colliders)
             {
-                if(collider == null)
+                if (collider == null)
                     continue;
 
                 NPCReactor reactor;
@@ -286,36 +291,61 @@ public class MainFarmer : MonoBehaviour
         canClick = true;
     }
 
-    private void displayInventory(){
-        if (Input.GetKeyDown(KeyCode.Tab)){
-            if(invent){
+    private void displayInventory()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (invent)
+            {
                 invent = false;
                 inventoryContainer.SetActive(false);
-            }else{
+            }
+            else
+            {
                 invent = true;
                 inventoryContainer.SetActive(true);
             }
-        } 
+        }
     }
 
-    private void equimentEffects(){
-        if(equipmentSet.GetEquipmentSetItem(0).itemType == Item.ItemType.Hat){
+    private void equimentEffects()
+    {
+        if (equipmentSet.GetEquipmentSetItem(0).itemType == Item.ItemType.Hat)
+        {
             hat = true;
-        } else {
+        }
+        else
+        {
             hat = false;
         }
-        if(equipmentSet.GetEquipmentSetItem(2).itemType == Item.ItemType.Shoes){
+        if (equipmentSet.GetEquipmentSetItem(1).itemType == Item.ItemType.Lantern)
+        {
+            light = true;
+        }
+        else
+        {
+            light = false;
+        }
+        if (equipmentSet.GetEquipmentSetItem(2).itemType == Item.ItemType.Shoes)
+        {
             multiply = true;
-        }else { 
+        }
+        else
+        {
             multiply = false;
         }
     }
 
-    public void Death(){
-        if(hat == true){
+    public void Death()
+    {
+        if (hat == true)
+        {
             equipmentSet.UnequipItem(0, true);
-        }else{
-            Destroy(gameObject);
+        }
+        else
+        {
+            equipmentSet.UnequipItem(1, true);
+            MainManager.Instance.died = true;
         }
     }
 
@@ -324,6 +354,25 @@ public class MainFarmer : MonoBehaviour
         yield return null;
     }
 
-    public Inventory GetInventory {get {return inventory;}}
+    public Inventory GetInventory { get { return inventory; } }
+
+    private void plant(FarmController controller, Vector3Int loc, Item.ItemType type)
+    {
+        if (inventory.hasSeeds(new Item { itemType = type }))
+        {
+            inventory.RemoveItem(new Item { itemType = type });
+        }
+        else
+        {
+            equipmentSet.UnequipItem(1);
+            inventory.RemoveItem(new Item { itemType = type });
+        }
+        controller.setSeedTypeAtPos(type, loc);
+    }
+
+    private void collect(FarmController controller, Vector3Int loc)
+    {
+        inventory.AddItem(new Item { itemType = controller.getSeedTypeAtPos(loc), amount = 2 });
+    }
 
 }
