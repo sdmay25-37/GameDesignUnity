@@ -25,6 +25,8 @@ public class Inventory {
             AddItem(new Item {itemType = Item.ItemType.Hat, amount = 1});
             AddItem(new Item {itemType = Item.ItemType.Shoes, amount = 1});
         }
+
+        Inventory.inventory = this;
     }
 
     public void AddItem(Item item){

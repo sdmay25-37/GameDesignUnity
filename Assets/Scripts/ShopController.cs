@@ -81,7 +81,7 @@ public class ShopController : NPCController
             inv.RemoveItem(new Item { itemType = costType, amount = 1 });
         }
 
-        inv.AddItem(soldItem);
+        inv.AddItem(new Item { itemType = soldItem.itemType, amount = soldItem.amount});
     }
 
     private void NotEnoughMessage()

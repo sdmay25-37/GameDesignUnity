@@ -9,7 +9,9 @@ public class PlaceablesSpawner : MonoBehaviour
     public void SpawnLantern(Transform player)
     {
         GameObject light = Instantiate(lantern, player.position, Quaternion.identity);
-        EnemyAI.AddLight(light.GetComponent<LightArea>());
+        LightArea lightArea = light.GetComponent<LightArea>(); //Replace with serilized reference if too expensive
+        lightArea.SetFarmer(gameObject.GetComponent<MainFarmer>());
+        EnemyAI.AddLight(lightArea); //Check for enemy behaviour
     }
 
     public void SpawnTrap(Transform player)
