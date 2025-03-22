@@ -73670,7 +73670,7 @@ MonoBehaviour:
   regularSpeed: 3
   multiply: 0
   light: 0
-  point: {fileID: 0}
+  point: {fileID: 326480105}
   controllers:
   - {fileID: 0}
   - {fileID: 0}
@@ -73759,6 +73759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 800709842}
+  lightAreas: []
   moveSpeed: 2
   attackRadius: 5
 --- !u!58 &857592443
@@ -99524,13 +99525,13 @@ MonoBehaviour:
   normalLantern: {fileID: 21300000, guid: d29a57c8aa01947458b4892056b9addf, type: 3}
   trap: {fileID: 21300000, guid: ea8ceca1156aeb243ad9dc4de32088c2, type: 3}
   coin: {fileID: 6631717109063506053, guid: 7ead8ba5dc6d79f4da1cc2f449bde712, type: 3}
-  shoes: {fileID: 347889459, guid: 4ba53b23d889cae4f9891e43d5773567, type: 3}
+  shoes: {fileID: 21300000, guid: 5e31c88ec3a7b6048a4d320be9110ea4, type: 3}
   empty: {fileID: 0}
-  seed1: {fileID: -7763475090823894447, guid: d6b8c791d8089b44a9a8c5a7423bd180, type: 3}
-  seed2: {fileID: -30672692, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
-  seed3: {fileID: 1125022499, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
-  seed4: {fileID: 1125022499, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
-  seed5: {fileID: -562987446, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
+  seed1: {fileID: 498180084, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  seed2: {fileID: -1019772943, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  seed3: {fileID: 1013642165, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  seed4: {fileID: -2039574382, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  seed5: {fileID: -1522180778, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
 --- !u!4 &1881668188
 Transform:
   m_ObjectHideFlags: 0

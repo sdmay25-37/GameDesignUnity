@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,12 +126,12 @@ TextureImporter:
       name: hat_cowboy_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1548
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: hat_cowboy_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1549
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: hat_cowboy_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1550
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: hat_cowboy_3
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1548
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: hat_cowboy_4
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1548
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: hat_cowboy_5
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1549
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: hat_cowboy_6
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1550
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: hat_cowboy_7
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1548
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1536
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: hat_cowboy_8
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1516
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: hat_cowboy_9
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1517
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: hat_cowboy_10
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1518
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: hat_cowboy_11
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1516
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: hat_cowboy_12
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1516
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: hat_cowboy_13
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1517
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,12 +420,12 @@ TextureImporter:
       name: hat_cowboy_14
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1518
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,12 +441,12 @@ TextureImporter:
       name: hat_cowboy_15
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1516
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1504
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,12 +462,12 @@ TextureImporter:
       name: hat_cowboy_16
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1484
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,12 +483,12 @@ TextureImporter:
       name: hat_cowboy_17
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1485
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,12 +504,12 @@ TextureImporter:
       name: hat_cowboy_18
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1486
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,12 +525,12 @@ TextureImporter:
       name: hat_cowboy_19
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1484
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,12 +546,12 @@ TextureImporter:
       name: hat_cowboy_20
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1484
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,12 +567,12 @@ TextureImporter:
       name: hat_cowboy_21
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1485
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,12 +588,12 @@ TextureImporter:
       name: hat_cowboy_22
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1486
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,12 +609,12 @@ TextureImporter:
       name: hat_cowboy_23
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1484
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1472
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -630,12 +630,12 @@ TextureImporter:
       name: hat_cowboy_24
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1452
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -651,12 +651,12 @@ TextureImporter:
       name: hat_cowboy_25
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1453
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,12 +672,12 @@ TextureImporter:
       name: hat_cowboy_26
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1454
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -693,12 +693,12 @@ TextureImporter:
       name: hat_cowboy_27
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1452
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -714,12 +714,12 @@ TextureImporter:
       name: hat_cowboy_28
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1452
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -735,12 +735,12 @@ TextureImporter:
       name: hat_cowboy_29
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1453
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -756,12 +756,12 @@ TextureImporter:
       name: hat_cowboy_30
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1454
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -777,12 +777,12 @@ TextureImporter:
       name: hat_cowboy_31
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1452
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1440
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -798,12 +798,12 @@ TextureImporter:
       name: hat_cowboy_32
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1420
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1408
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -819,12 +819,12 @@ TextureImporter:
       name: hat_cowboy_33
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1419
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1408
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -840,12 +840,12 @@ TextureImporter:
       name: hat_cowboy_34
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1422
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1408
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -861,12 +861,12 @@ TextureImporter:
       name: hat_cowboy_35
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1424
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1408
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -882,12 +882,12 @@ TextureImporter:
       name: hat_cowboy_36
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1420
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1408
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -903,12 +903,12 @@ TextureImporter:
       name: hat_cowboy_37
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1388
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1376
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -924,12 +924,12 @@ TextureImporter:
       name: hat_cowboy_38
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1387
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1376
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -945,12 +945,12 @@ TextureImporter:
       name: hat_cowboy_39
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1390
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1376
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -966,12 +966,12 @@ TextureImporter:
       name: hat_cowboy_40
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1392
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1376
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -987,12 +987,12 @@ TextureImporter:
       name: hat_cowboy_41
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1388
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1376
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1008,12 +1008,12 @@ TextureImporter:
       name: hat_cowboy_42
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1356
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1344
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1029,12 +1029,12 @@ TextureImporter:
       name: hat_cowboy_43
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1355
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1344
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1050,12 +1050,12 @@ TextureImporter:
       name: hat_cowboy_44
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1358
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1344
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1071,12 +1071,12 @@ TextureImporter:
       name: hat_cowboy_45
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1360
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1344
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1092,12 +1092,12 @@ TextureImporter:
       name: hat_cowboy_46
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1356
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1344
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1113,12 +1113,12 @@ TextureImporter:
       name: hat_cowboy_47
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1324
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1312
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1134,12 +1134,12 @@ TextureImporter:
       name: hat_cowboy_48
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1323
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1312
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1155,12 +1155,12 @@ TextureImporter:
       name: hat_cowboy_49
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1326
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1312
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1176,12 +1176,12 @@ TextureImporter:
       name: hat_cowboy_50
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1328
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1312
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1197,12 +1197,12 @@ TextureImporter:
       name: hat_cowboy_51
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1324
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1312
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1218,12 +1218,12 @@ TextureImporter:
       name: hat_cowboy_52
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1293
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1280
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1239,12 +1239,12 @@ TextureImporter:
       name: hat_cowboy_53
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1292
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1280
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1260,12 +1260,12 @@ TextureImporter:
       name: hat_cowboy_54
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1293
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1280
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1281,12 +1281,12 @@ TextureImporter:
       name: hat_cowboy_55
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1293
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1280
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1302,12 +1302,12 @@ TextureImporter:
       name: hat_cowboy_56
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1293
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1280
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1323,12 +1323,12 @@ TextureImporter:
       name: hat_cowboy_57
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1261
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1248
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1344,12 +1344,12 @@ TextureImporter:
       name: hat_cowboy_58
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1262
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1248
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1365,12 +1365,12 @@ TextureImporter:
       name: hat_cowboy_59
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1262
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1248
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1386,12 +1386,12 @@ TextureImporter:
       name: hat_cowboy_60
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1261
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1248
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1407,12 +1407,12 @@ TextureImporter:
       name: hat_cowboy_61
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1261
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1248
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1428,12 +1428,12 @@ TextureImporter:
       name: hat_cowboy_62
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1229
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1216
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1449,12 +1449,12 @@ TextureImporter:
       name: hat_cowboy_63
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1228
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1216
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1470,12 +1470,12 @@ TextureImporter:
       name: hat_cowboy_64
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1228
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1216
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1491,12 +1491,12 @@ TextureImporter:
       name: hat_cowboy_65
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1229
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1216
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1512,12 +1512,12 @@ TextureImporter:
       name: hat_cowboy_66
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1229
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1216
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1533,12 +1533,12 @@ TextureImporter:
       name: hat_cowboy_67
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1197
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1184
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1554,12 +1554,12 @@ TextureImporter:
       name: hat_cowboy_68
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1196
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1184
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1575,12 +1575,12 @@ TextureImporter:
       name: hat_cowboy_69
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1196
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1184
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1596,12 +1596,12 @@ TextureImporter:
       name: hat_cowboy_70
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1197
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1184
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1617,12 +1617,12 @@ TextureImporter:
       name: hat_cowboy_71
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1197
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1184
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1638,12 +1638,12 @@ TextureImporter:
       name: hat_cowboy_72
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1164
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1659,12 +1659,12 @@ TextureImporter:
       name: hat_cowboy_73
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1165
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1680,12 +1680,12 @@ TextureImporter:
       name: hat_cowboy_74
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1166
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1701,12 +1701,12 @@ TextureImporter:
       name: hat_cowboy_75
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1164
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1722,12 +1722,12 @@ TextureImporter:
       name: hat_cowboy_76
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1164
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1743,12 +1743,12 @@ TextureImporter:
       name: hat_cowboy_77
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1165
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1764,12 +1764,12 @@ TextureImporter:
       name: hat_cowboy_78
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1166
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1785,12 +1785,12 @@ TextureImporter:
       name: hat_cowboy_79
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1164
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1152
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1806,12 +1806,12 @@ TextureImporter:
       name: hat_cowboy_80
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1132
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1827,12 +1827,12 @@ TextureImporter:
       name: hat_cowboy_81
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1133
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1848,12 +1848,12 @@ TextureImporter:
       name: hat_cowboy_82
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1134
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1869,12 +1869,12 @@ TextureImporter:
       name: hat_cowboy_83
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1132
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1890,12 +1890,12 @@ TextureImporter:
       name: hat_cowboy_84
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1132
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1911,12 +1911,12 @@ TextureImporter:
       name: hat_cowboy_85
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1133
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1932,12 +1932,12 @@ TextureImporter:
       name: hat_cowboy_86
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1134
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1953,12 +1953,12 @@ TextureImporter:
       name: hat_cowboy_87
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1132
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1120
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1974,12 +1974,12 @@ TextureImporter:
       name: hat_cowboy_88
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1100
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1995,12 +1995,12 @@ TextureImporter:
       name: hat_cowboy_89
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1101
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2016,12 +2016,12 @@ TextureImporter:
       name: hat_cowboy_90
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1102
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2037,12 +2037,12 @@ TextureImporter:
       name: hat_cowboy_91
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1100
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2058,12 +2058,12 @@ TextureImporter:
       name: hat_cowboy_92
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1100
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2079,12 +2079,12 @@ TextureImporter:
       name: hat_cowboy_93
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1101
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2100,12 +2100,12 @@ TextureImporter:
       name: hat_cowboy_94
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1102
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2121,12 +2121,12 @@ TextureImporter:
       name: hat_cowboy_95
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1100
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1088
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2142,12 +2142,12 @@ TextureImporter:
       name: hat_cowboy_96
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1068
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2163,12 +2163,12 @@ TextureImporter:
       name: hat_cowboy_97
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1069
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2184,12 +2184,12 @@ TextureImporter:
       name: hat_cowboy_98
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1070
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2205,12 +2205,12 @@ TextureImporter:
       name: hat_cowboy_99
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1068
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2226,12 +2226,12 @@ TextureImporter:
       name: hat_cowboy_100
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1068
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2247,12 +2247,12 @@ TextureImporter:
       name: hat_cowboy_101
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1069
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 160
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2268,12 +2268,12 @@ TextureImporter:
       name: hat_cowboy_102
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1070
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2289,12 +2289,12 @@ TextureImporter:
       name: hat_cowboy_103
       rect:
         serializedVersion: 2
-        x: 232
-        y: 1068
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 1056
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2310,12 +2310,12 @@ TextureImporter:
       name: hat_cowboy_104
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1036
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1024
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2331,12 +2331,12 @@ TextureImporter:
       name: hat_cowboy_105
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1035
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1024
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2352,12 +2352,12 @@ TextureImporter:
       name: hat_cowboy_106
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1035
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 1024
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2373,12 +2373,12 @@ TextureImporter:
       name: hat_cowboy_107
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1036
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 1024
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2394,12 +2394,12 @@ TextureImporter:
       name: hat_cowboy_108
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1004
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 992
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2415,12 +2415,12 @@ TextureImporter:
       name: hat_cowboy_109
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1005
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 992
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2436,12 +2436,12 @@ TextureImporter:
       name: hat_cowboy_110
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1005
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 992
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2457,12 +2457,12 @@ TextureImporter:
       name: hat_cowboy_111
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1003
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 992
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2478,12 +2478,12 @@ TextureImporter:
       name: hat_cowboy_112
       rect:
         serializedVersion: 2
-        x: 8
-        y: 972
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 960
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2499,12 +2499,12 @@ TextureImporter:
       name: hat_cowboy_113
       rect:
         serializedVersion: 2
-        x: 40
-        y: 971
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 960
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2520,12 +2520,12 @@ TextureImporter:
       name: hat_cowboy_114
       rect:
         serializedVersion: 2
-        x: 72
-        y: 971
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 960
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2541,12 +2541,12 @@ TextureImporter:
       name: hat_cowboy_115
       rect:
         serializedVersion: 2
-        x: 104
-        y: 971
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 960
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2562,12 +2562,12 @@ TextureImporter:
       name: hat_cowboy_116
       rect:
         serializedVersion: 2
-        x: 8
-        y: 940
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 928
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2583,12 +2583,12 @@ TextureImporter:
       name: hat_cowboy_117
       rect:
         serializedVersion: 2
-        x: 40
-        y: 939
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 928
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2604,12 +2604,12 @@ TextureImporter:
       name: hat_cowboy_118
       rect:
         serializedVersion: 2
-        x: 72
-        y: 939
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 928
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2625,12 +2625,12 @@ TextureImporter:
       name: hat_cowboy_119
       rect:
         serializedVersion: 2
-        x: 104
-        y: 939
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 928
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2646,12 +2646,12 @@ TextureImporter:
       name: hat_cowboy_120
       rect:
         serializedVersion: 2
-        x: 8
-        y: 907
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 896
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2667,12 +2667,12 @@ TextureImporter:
       name: hat_cowboy_121
       rect:
         serializedVersion: 2
-        x: 8
-        y: 877
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 864
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2688,12 +2688,12 @@ TextureImporter:
       name: hat_cowboy_122
       rect:
         serializedVersion: 2
-        x: 8
-        y: 843
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 832
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2709,12 +2709,12 @@ TextureImporter:
       name: hat_cowboy_123
       rect:
         serializedVersion: 2
-        x: 8
-        y: 811
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 800
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2730,12 +2730,12 @@ TextureImporter:
       name: hat_cowboy_124
       rect:
         serializedVersion: 2
-        x: 8
-        y: 781
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 768
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2751,12 +2751,12 @@ TextureImporter:
       name: hat_cowboy_125
       rect:
         serializedVersion: 2
-        x: 8
-        y: 749
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 736
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2772,12 +2772,12 @@ TextureImporter:
       name: hat_cowboy_126
       rect:
         serializedVersion: 2
-        x: 8
-        y: 717
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 704
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2793,12 +2793,12 @@ TextureImporter:
       name: hat_cowboy_127
       rect:
         serializedVersion: 2
-        x: 8
-        y: 685
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 672
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2814,12 +2814,12 @@ TextureImporter:
       name: hat_cowboy_128
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 640
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2835,12 +2835,12 @@ TextureImporter:
       name: hat_cowboy_129
       rect:
         serializedVersion: 2
-        x: 52
+        x: 32
         y: 640
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2856,12 +2856,12 @@ TextureImporter:
       name: hat_cowboy_130
       rect:
         serializedVersion: 2
-        x: 8
-        y: 620
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 608
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2877,12 +2877,12 @@ TextureImporter:
       name: hat_cowboy_131
       rect:
         serializedVersion: 2
-        x: 40
-        y: 620
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 608
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2903,7 +2903,7 @@ TextureImporter:
         width: 7
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2919,12 +2919,12 @@ TextureImporter:
       name: hat_cowboy_133
       rect:
         serializedVersion: 2
-        x: 72
-        y: 622
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 608
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2945,7 +2945,7 @@ TextureImporter:
         width: 7
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2961,12 +2961,12 @@ TextureImporter:
       name: hat_cowboy_135
       rect:
         serializedVersion: 2
-        x: 104
-        y: 621
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 608
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2987,7 +2987,7 @@ TextureImporter:
         width: 7
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3003,12 +3003,12 @@ TextureImporter:
       name: hat_cowboy_137
       rect:
         serializedVersion: 2
-        x: 136
-        y: 621
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 608
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3024,12 +3024,12 @@ TextureImporter:
       name: hat_cowboy_138
       rect:
         serializedVersion: 2
-        x: 8
-        y: 588
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 576
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3045,12 +3045,12 @@ TextureImporter:
       name: hat_cowboy_139
       rect:
         serializedVersion: 2
-        x: 40
-        y: 588
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 576
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3066,12 +3066,12 @@ TextureImporter:
       name: hat_cowboy_140
       rect:
         serializedVersion: 2
-        x: 72
-        y: 589
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 576
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3087,12 +3087,12 @@ TextureImporter:
       name: hat_cowboy_141
       rect:
         serializedVersion: 2
-        x: 104
-        y: 589
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 576
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3108,12 +3108,12 @@ TextureImporter:
       name: hat_cowboy_142
       rect:
         serializedVersion: 2
-        x: 136
-        y: 590
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 576
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3129,12 +3129,12 @@ TextureImporter:
       name: hat_cowboy_143
       rect:
         serializedVersion: 2
-        x: 8
-        y: 556
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 544
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3150,12 +3150,12 @@ TextureImporter:
       name: hat_cowboy_144
       rect:
         serializedVersion: 2
-        x: 40
-        y: 556
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 544
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3171,12 +3171,12 @@ TextureImporter:
       name: hat_cowboy_145
       rect:
         serializedVersion: 2
-        x: 75
-        y: 557
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 544
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3192,12 +3192,12 @@ TextureImporter:
       name: hat_cowboy_146
       rect:
         serializedVersion: 2
-        x: 105
-        y: 557
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 544
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3213,12 +3213,12 @@ TextureImporter:
       name: hat_cowboy_147
       rect:
         serializedVersion: 2
-        x: 136
-        y: 559
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 544
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3234,12 +3234,12 @@ TextureImporter:
       name: hat_cowboy_148
       rect:
         serializedVersion: 2
-        x: 8
-        y: 524
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 512
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3255,12 +3255,12 @@ TextureImporter:
       name: hat_cowboy_149
       rect:
         serializedVersion: 2
-        x: 40
-        y: 524
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 512
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3276,12 +3276,12 @@ TextureImporter:
       name: hat_cowboy_150
       rect:
         serializedVersion: 2
-        x: 72
-        y: 525
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 512
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3297,12 +3297,12 @@ TextureImporter:
       name: hat_cowboy_151
       rect:
         serializedVersion: 2
-        x: 105
-        y: 525
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 512
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3318,12 +3318,12 @@ TextureImporter:
       name: hat_cowboy_152
       rect:
         serializedVersion: 2
-        x: 136
-        y: 526
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 512
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3339,12 +3339,12 @@ TextureImporter:
       name: hat_cowboy_153
       rect:
         serializedVersion: 2
-        x: 8
-        y: 492
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 480
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3360,12 +3360,12 @@ TextureImporter:
       name: hat_cowboy_154
       rect:
         serializedVersion: 2
-        x: 40
-        y: 493
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3386,7 +3386,7 @@ TextureImporter:
         width: 7
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3402,12 +3402,12 @@ TextureImporter:
       name: hat_cowboy_156
       rect:
         serializedVersion: 2
-        x: 72
-        y: 494
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 480
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3428,7 +3428,7 @@ TextureImporter:
         width: 7
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3444,12 +3444,12 @@ TextureImporter:
       name: hat_cowboy_158
       rect:
         serializedVersion: 2
-        x: 104
-        y: 492
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 480
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3470,7 +3470,7 @@ TextureImporter:
         width: 7
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3486,12 +3486,12 @@ TextureImporter:
       name: hat_cowboy_160
       rect:
         serializedVersion: 2
-        x: 136
-        y: 492
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 480
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3507,12 +3507,12 @@ TextureImporter:
       name: hat_cowboy_161
       rect:
         serializedVersion: 2
-        x: 8
-        y: 460
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3528,12 +3528,12 @@ TextureImporter:
       name: hat_cowboy_162
       rect:
         serializedVersion: 2
-        x: 40
-        y: 460
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3549,12 +3549,12 @@ TextureImporter:
       name: hat_cowboy_163
       rect:
         serializedVersion: 2
-        x: 72
-        y: 461
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3570,12 +3570,12 @@ TextureImporter:
       name: hat_cowboy_164
       rect:
         serializedVersion: 2
-        x: 104
-        y: 461
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3591,12 +3591,12 @@ TextureImporter:
       name: hat_cowboy_165
       rect:
         serializedVersion: 2
-        x: 136
-        y: 461
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 448
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3612,12 +3612,12 @@ TextureImporter:
       name: hat_cowboy_166
       rect:
         serializedVersion: 2
-        x: 8
-        y: 428
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3633,12 +3633,12 @@ TextureImporter:
       name: hat_cowboy_167
       rect:
         serializedVersion: 2
-        x: 40
-        y: 428
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3654,12 +3654,12 @@ TextureImporter:
       name: hat_cowboy_168
       rect:
         serializedVersion: 2
-        x: 74
-        y: 429
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3675,12 +3675,12 @@ TextureImporter:
       name: hat_cowboy_169
       rect:
         serializedVersion: 2
-        x: 105
-        y: 429
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3696,12 +3696,12 @@ TextureImporter:
       name: hat_cowboy_170
       rect:
         serializedVersion: 2
-        x: 136
-        y: 431
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 416
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3717,12 +3717,12 @@ TextureImporter:
       name: hat_cowboy_171
       rect:
         serializedVersion: 2
-        x: 8
-        y: 396
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3738,12 +3738,12 @@ TextureImporter:
       name: hat_cowboy_172
       rect:
         serializedVersion: 2
-        x: 40
-        y: 396
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3759,12 +3759,12 @@ TextureImporter:
       name: hat_cowboy_173
       rect:
         serializedVersion: 2
-        x: 72
-        y: 397
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3780,12 +3780,12 @@ TextureImporter:
       name: hat_cowboy_174
       rect:
         serializedVersion: 2
-        x: 105
-        y: 397
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3801,12 +3801,12 @@ TextureImporter:
       name: hat_cowboy_175
       rect:
         serializedVersion: 2
-        x: 136
-        y: 398
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 384
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3822,12 +3822,12 @@ TextureImporter:
       name: hat_cowboy_176
       rect:
         serializedVersion: 2
-        x: 8
-        y: 369
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3843,12 +3843,12 @@ TextureImporter:
       name: hat_cowboy_177
       rect:
         serializedVersion: 2
-        x: 40
-        y: 370
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3864,12 +3864,12 @@ TextureImporter:
       name: hat_cowboy_178
       rect:
         serializedVersion: 2
-        x: 8
-        y: 337
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3885,12 +3885,12 @@ TextureImporter:
       name: hat_cowboy_179
       rect:
         serializedVersion: 2
-        x: 40
-        y: 338
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3906,12 +3906,12 @@ TextureImporter:
       name: hat_cowboy_180
       rect:
         serializedVersion: 2
-        x: 8
-        y: 305
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3927,12 +3927,12 @@ TextureImporter:
       name: hat_cowboy_181
       rect:
         serializedVersion: 2
-        x: 40
-        y: 306
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3948,12 +3948,12 @@ TextureImporter:
       name: hat_cowboy_182
       rect:
         serializedVersion: 2
-        x: 8
-        y: 273
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3969,12 +3969,12 @@ TextureImporter:
       name: hat_cowboy_183
       rect:
         serializedVersion: 2
-        x: 40
-        y: 274
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3990,12 +3990,12 @@ TextureImporter:
       name: hat_cowboy_184
       rect:
         serializedVersion: 2
-        x: 8
-        y: 244
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4011,12 +4011,12 @@ TextureImporter:
       name: hat_cowboy_185
       rect:
         serializedVersion: 2
-        x: 40
-        y: 243
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4032,12 +4032,12 @@ TextureImporter:
       name: hat_cowboy_186
       rect:
         serializedVersion: 2
-        x: 72
-        y: 242
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4053,12 +4053,12 @@ TextureImporter:
       name: hat_cowboy_187
       rect:
         serializedVersion: 2
-        x: 104
-        y: 243
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4074,12 +4074,12 @@ TextureImporter:
       name: hat_cowboy_188
       rect:
         serializedVersion: 2
-        x: 136
-        y: 242
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4095,12 +4095,12 @@ TextureImporter:
       name: hat_cowboy_189
       rect:
         serializedVersion: 2
-        x: 8
-        y: 204
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4116,12 +4116,12 @@ TextureImporter:
       name: hat_cowboy_190
       rect:
         serializedVersion: 2
-        x: 40
-        y: 205
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4137,12 +4137,12 @@ TextureImporter:
       name: hat_cowboy_191
       rect:
         serializedVersion: 2
-        x: 72
-        y: 206
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4158,12 +4158,12 @@ TextureImporter:
       name: hat_cowboy_192
       rect:
         serializedVersion: 2
-        x: 104
-        y: 205
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4179,12 +4179,12 @@ TextureImporter:
       name: hat_cowboy_193
       rect:
         serializedVersion: 2
-        x: 136
-        y: 206
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4200,12 +4200,12 @@ TextureImporter:
       name: hat_cowboy_194
       rect:
         serializedVersion: 2
-        x: 8
-        y: 173
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4221,12 +4221,12 @@ TextureImporter:
       name: hat_cowboy_195
       rect:
         serializedVersion: 2
-        x: 41
-        y: 173
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4242,12 +4242,12 @@ TextureImporter:
       name: hat_cowboy_196
       rect:
         serializedVersion: 2
-        x: 74
-        y: 173
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4263,12 +4263,12 @@ TextureImporter:
       name: hat_cowboy_197
       rect:
         serializedVersion: 2
-        x: 105
-        y: 173
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4284,12 +4284,12 @@ TextureImporter:
       name: hat_cowboy_198
       rect:
         serializedVersion: 2
-        x: 138
-        y: 173
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4305,12 +4305,12 @@ TextureImporter:
       name: hat_cowboy_199
       rect:
         serializedVersion: 2
-        x: 8
-        y: 141
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4326,12 +4326,12 @@ TextureImporter:
       name: hat_cowboy_200
       rect:
         serializedVersion: 2
-        x: 39
-        y: 141
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4347,12 +4347,12 @@ TextureImporter:
       name: hat_cowboy_201
       rect:
         serializedVersion: 2
-        x: 70
-        y: 141
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4368,12 +4368,12 @@ TextureImporter:
       name: hat_cowboy_202
       rect:
         serializedVersion: 2
-        x: 103
-        y: 141
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4389,12 +4389,12 @@ TextureImporter:
       name: hat_cowboy_203
       rect:
         serializedVersion: 2
-        x: 134
-        y: 141
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4410,12 +4410,12 @@ TextureImporter:
       name: hat_cowboy_204
       rect:
         serializedVersion: 2
-        x: 8
-        y: 112
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4436,7 +4436,7 @@ TextureImporter:
         width: 6
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4452,12 +4452,12 @@ TextureImporter:
       name: hat_cowboy_206
       rect:
         serializedVersion: 2
-        x: 49
-        y: 114
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4478,7 +4478,7 @@ TextureImporter:
         width: 7
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4494,12 +4494,12 @@ TextureImporter:
       name: hat_cowboy_208
       rect:
         serializedVersion: 2
-        x: 80
-        y: 114
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4515,12 +4515,12 @@ TextureImporter:
       name: hat_cowboy_209
       rect:
         serializedVersion: 2
-        x: 104
-        y: 114
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4536,12 +4536,12 @@ TextureImporter:
       name: hat_cowboy_210
       rect:
         serializedVersion: 2
-        x: 136
-        y: 113
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4557,12 +4557,12 @@ TextureImporter:
       name: hat_cowboy_211
       rect:
         serializedVersion: 2
-        x: 8
-        y: 80
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4578,12 +4578,12 @@ TextureImporter:
       name: hat_cowboy_212
       rect:
         serializedVersion: 2
-        x: 40
-        y: 80
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4599,12 +4599,12 @@ TextureImporter:
       name: hat_cowboy_213
       rect:
         serializedVersion: 2
-        x: 72
-        y: 81
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4620,12 +4620,12 @@ TextureImporter:
       name: hat_cowboy_214
       rect:
         serializedVersion: 2
-        x: 104
-        y: 82
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4641,12 +4641,12 @@ TextureImporter:
       name: hat_cowboy_215
       rect:
         serializedVersion: 2
-        x: 136
-        y: 81
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4662,12 +4662,12 @@ TextureImporter:
       name: hat_cowboy_216
       rect:
         serializedVersion: 2
-        x: 8
-        y: 48
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4683,12 +4683,12 @@ TextureImporter:
       name: hat_cowboy_217
       rect:
         serializedVersion: 2
-        x: 40
-        y: 49
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4709,7 +4709,7 @@ TextureImporter:
         width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4725,12 +4725,12 @@ TextureImporter:
       name: hat_cowboy_219
       rect:
         serializedVersion: 2
-        x: 72
-        y: 49
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4751,7 +4751,7 @@ TextureImporter:
         width: 11
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4767,12 +4767,12 @@ TextureImporter:
       name: hat_cowboy_221
       rect:
         serializedVersion: 2
-        x: 109
-        y: 51
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4788,12 +4788,12 @@ TextureImporter:
       name: hat_cowboy_222
       rect:
         serializedVersion: 2
-        x: 136
-        y: 49
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4809,12 +4809,12 @@ TextureImporter:
       name: hat_cowboy_223
       rect:
         serializedVersion: 2
-        x: 8
-        y: 16
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4835,7 +4835,7 @@ TextureImporter:
         width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4851,12 +4851,12 @@ TextureImporter:
       name: hat_cowboy_225
       rect:
         serializedVersion: 2
-        x: 43
-        y: 17
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4872,12 +4872,12 @@ TextureImporter:
       name: hat_cowboy_226
       rect:
         serializedVersion: 2
-        x: 72
-        y: 17
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4893,12 +4893,12 @@ TextureImporter:
       name: hat_cowboy_227
       rect:
         serializedVersion: 2
-        x: 104
-        y: 19
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4919,7 +4919,7 @@ TextureImporter:
         width: 11
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4935,12 +4935,12 @@ TextureImporter:
       name: hat_cowboy_229
       rect:
         serializedVersion: 2
-        x: 136
-        y: 17
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
