@@ -12,14 +12,14 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private float multiplierSpeed = 6;
     [SerializeField] private float regularSpeed = 3;
     public bool multiply = false;
-    public bool light = false;
+    public bool myLight = false;
 
     // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
 
     private Vector2 direction;
     [SerializeField] private Transform point;
     [SerializeField] private List<FarmController> controllers; // List to hold multiple FarmControllers
-    private bool canClick;
+    private bool canPlant;
     
     // Inventory
     private Inventory inventory;
@@ -52,7 +52,7 @@ public class MainFarmer : MonoBehaviour
         // ItemObject.CreateItemObject(new Vector3(0,1,0), new Item{itemType=Item.ItemType.Seed1});
 
         // original
-        canClick = true;
+        canPlant = true;
         animator = transform.Find("Body").GetComponent<Animator>();
         lastMousePosition = Input.mousePosition;
 
@@ -103,7 +103,7 @@ public class MainFarmer : MonoBehaviour
         }
 
         // Handle actions when the left mouse button is clicked
-        if (canClick && Input.GetMouseButton(0))
+        if (canPlant && Input.GetMouseButton(0))
         {
             Action();
         }
@@ -161,7 +161,7 @@ public class MainFarmer : MonoBehaviour
                     plant(controller, pos, type);
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
-                    StartCoroutine(MouseCoolDown());
+                    StartCoroutine(PlantCoolDown());
                     return;
                 }
                 else if (tile.Equals(pos) && controller.IsFlower(pos))
@@ -169,7 +169,7 @@ public class MainFarmer : MonoBehaviour
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos); // Delegate interaction to the correct controller
                     collect(controller, pos);
-                    StartCoroutine(MouseCoolDown());
+                    StartCoroutine(PlantCoolDown());
                     return;
                 }
             }
@@ -279,13 +279,13 @@ public class MainFarmer : MonoBehaviour
         animator.SetFloat("MoveY", y);
     }
 
-    IEnumerator MouseCoolDown()
+    IEnumerator PlantCoolDown()
     {
-        canClick = false;
+        canPlant = false;
         point.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.4f);
         point.gameObject.SetActive(true);
-        canClick = true;
+        canPlant = true;
     }
 
     private void displayInventory(){
@@ -307,9 +307,9 @@ public class MainFarmer : MonoBehaviour
             hat = false;
         }
         if(equipmentSet.GetEquipmentSetItem(1).itemType == Item.ItemType.Lantern){
-            light = true;
+            myLight = true;
         } else {
-            light = false;
+            myLight = false;
         }
         if(equipmentSet.GetEquipmentSetItem(2).itemType == Item.ItemType.Shoes){
             multiply = true;

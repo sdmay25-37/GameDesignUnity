@@ -10,4 +10,15 @@ public class NPCReactor : MonoBehaviour
     {
         controller.Interaction();
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.gameObject.name.Equals("MainFarmer"))
+        {
+            Debug.Log("Not Farmer: " + other.gameObject.name);
+            return;
+        }
+        Debug.Log("Exiting");
+        controller.Exit();
+    }
 }

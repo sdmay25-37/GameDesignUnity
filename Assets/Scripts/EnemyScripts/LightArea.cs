@@ -38,7 +38,7 @@ public class LightArea : MonoBehaviour
         {
             Debug.LogError("ParentScript is missing!");
         }
-        if(farmerScript.light){
+        if(farmerScript.myLight){
             light2D.intensity = 0.5f;
         }else{
             light2D.intensity = 0.1f;

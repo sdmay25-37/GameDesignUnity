@@ -91,6 +91,13 @@ public class ShopController : NPCController
         StartCoroutine(SwitchText(message));
     }
 
+    public override void Exit()
+    {
+        base.Exit();
+        StopAllCoroutines();
+        talking = false;
+    }
+
     private IEnumerator SwitchText(string text)
     {
         talking = true;

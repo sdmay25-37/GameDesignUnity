@@ -55,6 +55,14 @@ public class WitchController : NPCController
         StartCoroutine(SwitchText(message));
     }
 
+    override public void Exit()
+    {
+        base.Exit();
+        state = WITCHSTATE.Idle;
+        StopAllCoroutines();
+        talking = false;
+    }
+
     private IEnumerator SwitchText(string text)
     {
         talking = true;
