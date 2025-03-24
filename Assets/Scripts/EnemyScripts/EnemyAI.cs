@@ -179,8 +179,8 @@ public class EnemyAI : MonoBehaviour
         );
     }
 
-    public static void AddLight(LightArea light)
+    public void AddLight(LightArea light)
     {
-        //lightAreas.Add(light);
+        lightAreas.Add(light);
     }
 }

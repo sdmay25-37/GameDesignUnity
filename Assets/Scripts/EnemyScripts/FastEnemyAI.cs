@@ -158,4 +158,9 @@ public class FastEnemyAI : MonoBehaviour
             sin * vector.x + cos * vector.y
         );
     }
+
+    public void AddLight(LightArea light)
+    {
+        lightAreas.Add(light);
+    }
 }

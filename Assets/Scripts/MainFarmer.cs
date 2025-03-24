@@ -103,15 +103,16 @@ public class MainFarmer : MonoBehaviour
         }
 
         // Handle actions when the left mouse button is clicked
-        if (canPlant && Input.GetMouseButton(0))
+        if (canPlant && Input.GetKeyDown(KeyCode.Space))
         {
             Action();
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Talk();
         }
+
         if (SceneManager.GetActiveScene().name == "ForestScene")
         {
             if (Input.GetKeyDown(KeyCode.E) && inventory.GetItemCount(Item.ItemType.Trap) > 0)
