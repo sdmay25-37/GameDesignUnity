@@ -21,14 +21,14 @@ public class ShopController : NPCController
             soldItem = new Item {itemType = Item.ItemType.Trap, amount = 1};
             itemName = "trap";
             costName = "yellow seeds";
-            costType = Item.ItemType.Seed1;
+            costType = Item.ItemType.SeedYellow;
         }
         else
         {
             soldItem = new Item { itemType = Item.ItemType.Lantern, amount = 1 };
             itemName = "lantern";
             costName = "black seeds";
-            costType = Item.ItemType.Seed1; //Change seed depending
+            costType = Item.ItemType.SeedYellow; //Change seed depending
         }
     }
 

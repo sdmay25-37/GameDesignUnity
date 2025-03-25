@@ -52,11 +52,11 @@ public class EquipmentSet {
     public Item.ItemType hasSeeds(){
         Item holding = GetEquipmentSetItem(1);
         switch (holding.itemType){
-            case Item.ItemType.Seed1: return Item.ItemType.Seed1;
-            case Item.ItemType.Seed2: return Item.ItemType.Seed2;
-            case Item.ItemType.Seed3: return Item.ItemType.Seed3;
-            case Item.ItemType.Seed4: return Item.ItemType.Seed4;
-            case Item.ItemType.Seed5: return Item.ItemType.Seed5;
+            case Item.ItemType.SeedYellow: return Item.ItemType.SeedYellow;
+            case Item.ItemType.SeedBlue: return Item.ItemType.SeedBlue;
+            case Item.ItemType.SeedBlack: return Item.ItemType.SeedBlack;
+            case Item.ItemType.SeedPink: return Item.ItemType.SeedPink;
+            case Item.ItemType.SeedStar: return Item.ItemType.SeedStar;
             default: return Item.ItemType.Empty;
         }
     }

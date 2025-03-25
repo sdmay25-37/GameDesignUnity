@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainFarmer : MonoBehaviour
 {
     [SerializeField] private PlaceablesSpawner spawner;
+    [SerializeField] private MessagePopup messagePopup;
     [SerializeField] private Collider2D playerCollider;
 
     // Speed vars
@@ -15,6 +16,8 @@ public class MainFarmer : MonoBehaviour
     public bool myLight = false;
 
     // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
+    private FLOWER flowerTypeSelected = FLOWER.YELLOW;
+    private List<FLOWER> seedsUnlocked = new List<FLOWER>();
 
     private Vector2 direction;
     [SerializeField] private Transform point;
@@ -40,6 +43,11 @@ public class MainFarmer : MonoBehaviour
 
     private void Start()
     {
+        UnlockSeed(FLOWER.YELLOW);
+        UnlockSeed(FLOWER.BLUE);
+        UnlockSeed(FLOWER.BLACK);
+        UnlockSeed(FLOWER.PINK);
+        UnlockSeed(FLOWER.STAR);
         //playerCollider = GetComponent<Collider2D>();
 
         // added
@@ -126,6 +134,18 @@ public class MainFarmer : MonoBehaviour
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.Lantern, amount = 1 });
             }
         }
+        if (SceneManager.GetActiveScene().name == "HomeFarmScene")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                flowerTypeSelected = seedsUnlocked[(seedsUnlocked.IndexOf(flowerTypeSelected) + 1) % seedsUnlocked.Count];
+                messagePopup.SendPopupMessage($"Planting {flowerTypeSelected.ToString()} seeds", Farm.FlowerToColor(flowerTypeSelected));
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                //Add cycle backwards if needed
+            }
+        }
 
         // Update animator parameters for movement
         SetAnimationParameters(direction.x, direction.y);
@@ -156,19 +176,24 @@ public class MainFarmer : MonoBehaviour
             {
                 // check if there are seeds.
                 // if (tile.Equals(pos) & inventory.hasSeeds(new Item{itemType=Item.ItemType.Seed1}) && !controller.IsFlower(pos))
-                Item.ItemType type = equipmentSet.hasSeeds();
-                if (tile.Equals(pos) & (type != Item.ItemType.Empty) & controller.IsEmpty(pos))
+                Item.ItemType type = Farm.FlowerToItemType(flowerTypeSelected);
+                if (tile.Equals(pos) & controller.IsEmpty(pos))
                 {
-                    plant(controller, pos, type);
+                    if (inventory.GetItemCount(Farm.FlowerToItemType(flowerTypeSelected)) == 0)
+                    {
+                        messagePopup.SendPopupMessage($"No {flowerTypeSelected.ToString()} seeds", Farm.FlowerToColor(flowerTypeSelected));
+                        return;
+                    }
+                    plant(controller, pos, Farm.FlowerToItemType(flowerTypeSelected));
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
-                    controller.InteractTile(pos); // Delegate interaction to the correct controller
+                    controller.InteractTile(pos, flowerTypeSelected); // Delegate interaction to the correct controller
                     StartCoroutine(PlantCoolDown());
                     return;
                 }
                 else if (tile.Equals(pos) && controller.IsFlower(pos))
                 {
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
-                    controller.InteractTile(pos); // Delegate interaction to the correct controller
+                    controller.InteractTile(pos, flowerTypeSelected); // Delegate interaction to the correct controller
                     collect(controller, pos);
                     StartCoroutine(PlantCoolDown());
                     return;
@@ -284,7 +309,7 @@ public class MainFarmer : MonoBehaviour
     {
         canPlant = false;
         point.gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.4f);
+        yield return null;
         point.gameObject.SetActive(true);
         canPlant = true;
     }
@@ -336,17 +361,30 @@ public class MainFarmer : MonoBehaviour
     public Inventory GetInventory {get {return inventory;}}
 
     private void plant(FarmController controller, Vector3Int loc, Item.ItemType type){
-        if (inventory.hasSeeds(new Item{itemType=type })){
-            inventory.RemoveItem(new Item{itemType=type });
-        }else{
-            equipmentSet.UnequipItem(1);
-            inventory.RemoveItem(new Item{itemType=type });
+        if (inventory.hasSeeds(new Item{itemType=type})){
+            inventory.RemoveItem(new Item{itemType=type});
+        }
+        else
+        {
+            Debug.Log("No seeds of that type"); //Shouldn't happene ever, checled before plant is called
+            //equipmentSet.UnequipItem(1);
+            //inventory.RemoveItem(new Item{itemType=type });
         }
         controller.setSeedTypeAtPos(type, loc);
     }
 
     private void collect(FarmController controller, Vector3Int loc){
-        inventory.AddItem(new Item { itemType = controller.getSeedTypeAtPos(loc), amount = 2});
+        Item.ItemType type = controller.getSeedTypeAtPos(loc);
+        inventory.AddItem(new Item { itemType = type, amount = Farm.FlowerHarvestRate(Farm.FlowerToItemType(type))});
+    }
+
+    private void UnlockSeed(FLOWER flower)
+    {
+        if (!seedsUnlocked.Contains(flower))
+        {
+            seedsUnlocked.Add(flower);
+            seedsUnlocked.Sort();
+        }
     }
 
 }

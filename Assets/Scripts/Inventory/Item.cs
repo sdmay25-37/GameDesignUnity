@@ -7,11 +7,11 @@ using System;
 [Serializable]
 public class Item {
     public enum ItemType {
-        Seed1,
-        Seed2,
-        Seed3,
-        Seed4,
-        Seed5,
+        SeedYellow,
+        SeedBlue,
+        SeedBlack,
+        SeedPink,
+        SeedStar,
         Coin,
         Lantern,
         Trap,
@@ -27,11 +27,11 @@ public class Item {
         switch (itemType){
             default:
                 case ItemType.Coin: return ItemAssets.Instance.coin;
-                case ItemType.Seed1: return ItemAssets.Instance.seed1;
-                case ItemType.Seed2: return ItemAssets.Instance.seed2;
-                case ItemType.Seed3: return ItemAssets.Instance.seed3;
-                case ItemType.Seed4: return ItemAssets.Instance.seed4;
-                case ItemType.Seed5: return ItemAssets.Instance.seed5;
+                case ItemType.SeedYellow: return ItemAssets.Instance.seed1;
+                case ItemType.SeedBlue: return ItemAssets.Instance.seed2;
+                case ItemType.SeedBlack: return ItemAssets.Instance.seed3;
+                case ItemType.SeedPink: return ItemAssets.Instance.seed4;
+                case ItemType.SeedStar: return ItemAssets.Instance.seed5;
                 case ItemType.Lantern: return ItemAssets.Instance.normalLantern;
                 case ItemType.Trap: return ItemAssets.Instance.trap;
                 case ItemType.Hat: return ItemAssets.Instance.gPaHat;
@@ -48,15 +48,15 @@ public class Item {
                 return true;
             case ItemType.Trap:
                 return true;
-            case ItemType.Seed1:
+            case ItemType.SeedYellow:
                 return true;
-            case ItemType.Seed2:
+            case ItemType.SeedBlue:
                 return true;   
-            case ItemType.Seed3:
+            case ItemType.SeedBlack:
                 return true;
-            case ItemType.Seed4:
+            case ItemType.SeedPink:
                 return true;
-            case ItemType.Seed5:
+            case ItemType.SeedStar:
                 return true;
             default:
                 return false;
@@ -65,7 +65,7 @@ public class Item {
 
     public bool isEquipment(){
         switch (itemType){
-            case ItemType.Hat or ItemType.Shoes or ItemType.Lantern or ItemType.Seed1 or ItemType.Seed2 or ItemType.Seed3 or ItemType.Seed4 or ItemType.Seed5:
+            case ItemType.Hat or ItemType.Shoes:
                 return true;
             default:
                 return false;

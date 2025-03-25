@@ -62,7 +62,7 @@ public class Farmer : MonoBehaviour
         {
             if(tile.Equals(pos))
             {
-                controller.InteractTile(pos);
+                controller.InteractTile(pos, FLOWER.YELLOW);
                 StartCoroutine(MouseCoolDown());
                 return;
             }
