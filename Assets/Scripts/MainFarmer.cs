@@ -45,9 +45,6 @@ public class MainFarmer : MonoBehaviour
     {
         UnlockSeed(FLOWER.YELLOW);
         UnlockSeed(FLOWER.BLUE);
-        UnlockSeed(FLOWER.BLACK);
-        UnlockSeed(FLOWER.PINK);
-        UnlockSeed(FLOWER.STAR);
         //playerCollider = GetComponent<Collider2D>();
 
         // added
