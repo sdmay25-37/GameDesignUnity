@@ -85,6 +85,7 @@ public class SceneTransition : MonoBehaviour
             yield return null;
         }
         Destroy(blackbox);
+        
     }
 
     private IEnumerator Death(){
