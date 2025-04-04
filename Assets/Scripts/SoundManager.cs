@@ -27,7 +27,7 @@ public class SoundManager : MonoBehaviour
     {
         if (clip != null)
         {
-            volume = PlayerPrefs.GetFloat("Volume", 0.5f);
+            volume = PlayerPrefs.GetFloat("Volume", 1.0f);
             sfxSource.PlayOneShot(clip, volume);
         }
     }
@@ -36,7 +36,7 @@ public class SoundManager : MonoBehaviour
     {
         if (musicSource.clip == clip) return;
 
-        volume = PlayerPrefs.GetFloat("Volume", 0.5f);
+        volume = PlayerPrefs.GetFloat("Volume", 1.0f);
         musicSource.clip = clip;
         musicSource.volume = volume;
         musicSource.loop = loop;
