@@ -842,7 +842,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572907592}
-  - component: {fileID: 572907591}
+  - component: {fileID: 572907593}
+  - component: {fileID: 572907597}
+  - component: {fileID: 572907596}
+  - component: {fileID: 572907595}
+  - component: {fileID: 572907594}
   m_Layer: 0
   m_Name: SeedSpawner
   m_TagString: Untagged
@@ -850,18 +854,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &572907591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572907590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad13e0289bddf1646bcadb74b944c44a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &572907592
 Transform:
   m_ObjectHideFlags: 0
@@ -877,6 +869,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572907593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440986cd7221c7147985ab873adec798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1835506552}
+  - {fileID: 1475735822}
+  probability: 0.5
+--- !u!114 &572907594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348b2e1ecc5342b4c9d114f82c2a1bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1835506552}
+  - {fileID: 1475735822}
+  probability: 0.5
+--- !u!114 &572907595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84f01f97e8a8b74a8740dadcee26e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1835506552}
+  - {fileID: 1475735822}
+  probability: 0.5
+--- !u!114 &572907596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d89eb13b7e4346a3f57da0c717de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1835506552}
+  - {fileID: 1475735822}
+  probability: 0.5
+--- !u!114 &572907597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572907590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bec556e6ccba5488829e6bb07ffa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1835506552}
+  - {fileID: 1475735822}
+  probability: 0.5
 --- !u!1 &766906995
 GameObject:
   m_ObjectHideFlags: 0
@@ -73665,6 +73737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 800709843}
+  messagePopup: {fileID: 0}
   playerCollider: {fileID: 800709838}
   multiplierSpeed: 6
   regularSpeed: 3
@@ -75475,6 +75548,37 @@ MonoBehaviour:
   - {fileID: 313180456}
   fEnemies:
   - {fileID: 1194247119}
+--- !u!1 &1475735821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475735822}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475735822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475735821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.784686, y: 2.9425292, z: 143.80971}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499303230
 GameObject:
   m_ObjectHideFlags: 0
@@ -99423,6 +99527,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1835506551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835506552}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835506552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835506551}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880985540
 GameObject:
   m_ObjectHideFlags: 0
@@ -99495,11 +99630,16 @@ MonoBehaviour:
   coin: {fileID: 6631717109063506053, guid: 7ead8ba5dc6d79f4da1cc2f449bde712, type: 3}
   shoes: {fileID: 21300000, guid: 5e31c88ec3a7b6048a4d320be9110ea4, type: 3}
   empty: {fileID: 0}
-  seed1: {fileID: 498180084, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed2: {fileID: -1019772943, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed3: {fileID: 1013642165, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed4: {fileID: -2039574382, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed5: {fileID: -1522180778, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedYellow: {fileID: -66079829, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedBlue: {fileID: -2075379209, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedBlack: {fileID: 1381075628, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedPink: {fileID: -678657951, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedStar: {fileID: 698725363, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  FlowerYellow: {fileID: -1555721752, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  FlowerBlue: {fileID: -1221834566, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  FlowerBlack: {fileID: 1054342621, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  FlowerPink: {fileID: -1901156179, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  FlowerStar: {fileID: -1349817377, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
 --- !u!4 &1881668188
 Transform:
   m_ObjectHideFlags: 0
@@ -141964,3 +142104,5 @@ SceneRoots:
   - {fileID: 1881668188}
   - {fileID: 432534233}
   - {fileID: 572907592}
+  - {fileID: 1835506552}
+  - {fileID: 1475735822}

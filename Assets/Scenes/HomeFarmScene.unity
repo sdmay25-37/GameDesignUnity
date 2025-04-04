@@ -25523,11 +25523,11 @@ MonoBehaviour:
   coin: {fileID: 1646452267, guid: c5535f2ff3ea89e4db5868b58c373152, type: 3}
   shoes: {fileID: 21300000, guid: 5e31c88ec3a7b6048a4d320be9110ea4, type: 3}
   empty: {fileID: 0}
-  seed1: {fileID: -66079829, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed2: {fileID: -2075379209, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed3: {fileID: 1381075628, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed4: {fileID: -678657951, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
-  seed5: {fileID: 698725363, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedYellow: {fileID: -66079829, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedBlue: {fileID: -2075379209, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedBlack: {fileID: 1381075628, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedPink: {fileID: -678657951, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
+  SeedStar: {fileID: 698725363, guid: cae03bb8096b3c24e92fb18e7871dc9e, type: 3}
 --- !u!4 &487919020
 Transform:
   m_ObjectHideFlags: 0
