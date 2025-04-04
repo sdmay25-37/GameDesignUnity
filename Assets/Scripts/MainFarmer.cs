@@ -39,7 +39,7 @@ public class MainFarmer : MonoBehaviour
     private float timeSinceMouseMoved = 0.0f;
     private bool isMouseMoving = false;
     private const float idleMouseTimeout = 3.0f; // Time before switching to movement direction animation
-    private Animator animator;
+    [SerializeField] private Animator[] animators;
 
     private void Start()
     {
@@ -58,7 +58,7 @@ public class MainFarmer : MonoBehaviour
 
         // original
         canPlant = true;
-        animator = transform.Find("Body").GetComponent<Animator>();
+        //animator = transform.Find("Body").GetComponent<Animator>(); Now plugged in in editor
         lastMousePosition = Input.mousePosition;
 
         
@@ -267,8 +267,8 @@ public class MainFarmer : MonoBehaviour
         Vector2 mouseDirection = (mouseWorldPosition - transform.position).normalized;
 
         // Set animator parameters based on mouse direction
-        animator.SetFloat("LookX", mouseDirection.x);
-        animator.SetFloat("LookY", mouseDirection.y);
+        //animator.SetFloat("LookX", mouseDirection.x);
+        //animator.SetFloat("LookY", mouseDirection.y);
     }
 
     private Vector2 GetInputDirection()
@@ -298,8 +298,11 @@ public class MainFarmer : MonoBehaviour
 
     void SetAnimationParameters(float x, float y)
     {
-        animator.SetFloat("MoveX", x);
-        animator.SetFloat("MoveY", y);
+        foreach(Animator animator in animators)
+        {
+            animator.SetFloat("MoveX", x);
+            animator.SetFloat("MoveY", y);
+        }
     }
 
     IEnumerator PlantCoolDown()
