@@ -7,7 +7,9 @@ public class WitchController : NPCController
 {
     private WITCHSTATE state;
     private bool talking;
-    [SerializeField] private TextMeshProUGUI dialog; 
+    [SerializeField] private TextMeshProUGUI dialog;
+    [SerializeField] private float timeBetweenLetters = 0.04f;
+    [SerializeField] private float timeBetweenPunctuation = 0.25f;
 
     // Start is called before the first frame update
     void Start()
@@ -69,10 +71,10 @@ public class WitchController : NPCController
         for(int i = 1; i <= text.Length; i++)
         {
             dialog.SetText(text.Substring(0, i));
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(timeBetweenLetters);
             if (i != text.Length && IsPunctuation(text.Substring(i-1, 1)))
             {
-                yield return new WaitForSeconds(0.35f);
+                yield return new WaitForSeconds(timeBetweenPunctuation);
             }
         }
         talking = false;
