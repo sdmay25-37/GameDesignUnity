@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -408,7 +409,12 @@ public class MainFarmer : MonoBehaviour
     void PauseGame()
     {
         controlsUI.SetActive(true);
-        Debug.Log("Escape Pressed - Unpaused");
+        for (int i = 0; i < controlsUI.transform.childCount; i++)
+        {
+            Transform child = controlsUI.transform.GetChild(i);
+            child.gameObject.SetActive(i == 0);
+        }
+        Debug.Log("Escape Pressed - Paused");
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -416,7 +422,7 @@ public class MainFarmer : MonoBehaviour
     public void ResumeGame()
     {
         controlsUI.SetActive(false);
-        Debug.Log("Escape Pressed - Paused");
+        Debug.Log("Escape Pressed - Unpaused");
 
         Time.timeScale = 1f;
         isPaused = false;
