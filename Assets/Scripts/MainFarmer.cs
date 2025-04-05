@@ -15,6 +15,11 @@ public class MainFarmer : MonoBehaviour
     public bool multiply = false;
     public bool myLight = false;
 
+    //for pause
+    private bool isPaused = false;
+
+
+
     // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
     private FLOWER flowerTypeSelected = FLOWER.YELLOW;
     private List<FLOWER> seedsUnlocked = new List<FLOWER>();
@@ -99,6 +104,26 @@ public class MainFarmer : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) direction.x = 1;
 
         direction.Normalize();
+
+        //Opening the escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //if escape was already pressed
+            if (isPaused)
+            {
+                //unpause
+                //remove esc options TODO
+                Debug.Log("Escape Pressed - Unpaused");
+                Time.timeScale = 1.0f;
+                isPaused = false;
+            }
+            else
+            {
+                Debug.Log("Escape Pressed - Paused");
+                Time.timeScale = 0.0f;
+                isPaused = true;
+            }
+        }
 
         // Move the character
         if (multiply){

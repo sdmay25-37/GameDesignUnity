@@ -70,7 +70,7 @@ public class SceneTransition : MonoBehaviour
             color.a += 0.01f;
             yield return null;
         }
-        SceneManager.LoadScene(targetScene);
+        SceneManager.LoadScene(1);
     }
 
     private IEnumerator FadeIn()
