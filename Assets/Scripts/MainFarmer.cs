@@ -413,7 +413,7 @@ public class MainFarmer : MonoBehaviour
         isPaused = true;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         controlsUI.SetActive(false);
         Debug.Log("Escape Pressed - Paused");
