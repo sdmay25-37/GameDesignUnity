@@ -8,6 +8,7 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private PlaceablesSpawner spawner;
     [SerializeField] private MessagePopup messagePopup;
     [SerializeField] private Collider2D playerCollider;
+    public GameObject controlsUI;
 
     // Speed vars
     [SerializeField] private float multiplierSpeed = 6;
@@ -57,7 +58,9 @@ public class MainFarmer : MonoBehaviour
         equipmentSet = new EquipmentSet();
         uiInventory.SetInventory(inventory);
         uiInventory.SetEquipmentSet(equipmentSet);
-        
+        controlsUI.SetActive(false);
+
+
         // If you want it to spawn an item- uncomment this
         // ItemObject.CreateItemObject(new Vector3(0,1,0), new Item{itemType=Item.ItemType.Seed1});
 
@@ -108,22 +111,12 @@ public class MainFarmer : MonoBehaviour
         //Opening the escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //if escape was already pressed
-            if (isPaused)
-            {
-                //unpause
-                //remove esc options TODO
-                Debug.Log("Escape Pressed - Unpaused");
-                Time.timeScale = 1.0f;
-                isPaused = false;
-            }
+            if (!isPaused)
+                PauseGame();
             else
-            {
-                Debug.Log("Escape Pressed - Paused");
-                Time.timeScale = 0.0f;
-                isPaused = true;
-            }
+                ResumeGame();
         }
+        
 
         // Move the character
         if (multiply){
@@ -410,6 +403,23 @@ public class MainFarmer : MonoBehaviour
             seedsUnlocked.Add(flower);
             seedsUnlocked.Sort();
         }
+    }
+
+    void PauseGame()
+    {
+        controlsUI.SetActive(true);
+        Debug.Log("Escape Pressed - Unpaused");
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    void ResumeGame()
+    {
+        controlsUI.SetActive(false);
+        Debug.Log("Escape Pressed - Paused");
+
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
 }
