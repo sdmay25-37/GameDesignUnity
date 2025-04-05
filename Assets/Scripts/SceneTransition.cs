@@ -37,7 +37,7 @@ public class SceneTransition : MonoBehaviour
     }
 
     public void PlayGame (){
-        StartCoroutine(FadeOutForest());
+        StartCoroutine(StartGame());
     }
 
     public void QuitGame(){
@@ -60,6 +60,20 @@ public class SceneTransition : MonoBehaviour
     }
 
     private IEnumerator FadeOutForest()
+    {
+        GameObject blackbox = Instantiate(blackout);
+        Image fadebox = blackbox.GetComponentInChildren<Image>();
+        Color color = new Color(0, 0, 0, 0);
+        while (color.a < 1f)
+        {
+            fadebox.color = color;
+            color.a += 0.01f;
+            yield return null;
+        }
+        SceneManager.LoadScene(targetScene);
+    }
+
+    private IEnumerator StartGame()
     {
         GameObject blackbox = Instantiate(blackout);
         Image fadebox = blackbox.GetComponentInChildren<Image>();
