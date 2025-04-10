@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Tilemaps;
 
 public class FarmController : MonoBehaviour
@@ -31,8 +32,30 @@ public class FarmController : MonoBehaviour
     void Start()
     {
         InitFarmTiles();
+        float currentTime = Time.realtimeSinceStartup;
         foreach (Farm farm in MainManager.Instance.activeTiles)
         {
+            // map.SetTile(farm.loc, tiles[farm.farmstate + 4 * (int)farm.flower]);
+            float elapsedTime = currentTime - farm.savedTime;
+            farm.timer -= elapsedTime; // Update the timer by subtracting elapsed time
+
+            if (farm.timer < -30f) {
+                farm.timer = 0;
+                farm.farmstate = (int)FARMSTATE.FLOWER;
+            }else if(farm.timer < -15f){
+                farm.timer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime);
+                if (farm.farmstate == (int)FARMSTATE.YOUNG){
+                    farm.timer = 0;
+                    farm.farmstate = (int)FARMSTATE.FLOWER;
+                }else{
+                    farm.farmstate += 2;
+                    farm.timer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime);
+                }
+            }else{
+                farm.timer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime);
+                farm.farmstate++;
+            }
+            // Update the tile in the Tilemap based on the new farm state
             map.SetTile(farm.loc, tiles[farm.farmstate + 4 * (int)farm.flower]);
         }
     }
@@ -71,6 +94,7 @@ public class FarmController : MonoBehaviour
 
             // Reset the timer for the next growth stage
             farm.timer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime);
+            farm.savedTime = Time.realtimeSinceStartup;
 
             if (farm.farmstate >= (int)FARMSTATE.FLOWER)
             {
@@ -100,8 +124,9 @@ public class FarmController : MonoBehaviour
         if (map.GetTile(spot) == tiles[(int)FARMSTATE.EMPTY])
         {
             Debug.Log($"Tile at {spot} in '{name}' is EMPTY. Planting SEED.");
+            float startTime = Time.realtimeSinceStartup;
             float initialTimer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
-            MainManager.Instance.activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer, flowerType));
+            MainManager.Instance.activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer, startTime, flowerType));
             map.SetTile(spot, tiles[(int)flowerType * 4 + (int)FARMSTATE.SEED]);
             status = 1;
             
@@ -177,14 +202,17 @@ public class Farm
     public Vector3Int loc;
     public int farmstate;
     public float timer;
+
+    public float savedTime;
     public FLOWER flower;
 
-    public Farm(Vector3Int loc, int farmstate, float timer, FLOWER flower)
+    public Farm(Vector3Int loc, int farmstate, float timer, float savedTime, FLOWER flower)
     {
         this.loc = loc;
         this.farmstate = farmstate;
         this.timer = timer;
         this.flower = flower;
+        this.savedTime = savedTime;
     }
 
     public static Item.ItemType FlowerToItemType(FLOWER flower)
