@@ -10,6 +10,10 @@ public class PlaceablesSpawner : MonoBehaviour
     {
         GameObject light = Instantiate(lantern, player.position, Quaternion.identity);
         LightArea lightArea = light.GetComponent<LightArea>(); //Replace with serilized reference if too expensive
+        if(lightArea == null)
+        {
+            Debug.Log("NO LIGHT");
+        }
         lightArea.SetFarmer(gameObject.GetComponent<MainFarmer>());
         EnemyManager.AddLight(lightArea);
     }
