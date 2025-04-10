@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public class test_item : MonoBehaviour
 {
@@ -18,12 +12,11 @@ public class test_item : MonoBehaviour
         if(itemCollider.IsTouching(other)){
             switch (other.tag){
                 case "Item":
-                    if(Input.GetKey(KeyCode.E)){
+                    if(Input.GetKey(KeyCode.Space)){
                         if(inventory == null){
                             inventory = GetComponentInParent<MainFarmer>().GetInventory;
                         }
                         ItemObject itemObject = other.GetComponent<ItemObject>();
-                        Debug.Log(inventory);
                         if(itemObject != null){
                             inventory.AddItem(itemObject.GetItem());
                             itemObject.DestroySelf();

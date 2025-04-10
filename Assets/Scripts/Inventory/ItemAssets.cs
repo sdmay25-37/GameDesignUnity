@@ -18,9 +18,6 @@ public class ItemAssets : MonoBehaviour
     public Sprite coin;
     public Sprite shoes;
     public Sprite empty;
-    public Sprite seed1;
-    public Sprite seed2;
-    public Sprite seed3;  
-    public Sprite seed4;
-    public Sprite seed5;  
+    public Sprite SeedYellow, SeedBlue, SeedBlack, SeedPink, SeedStar;
+    public Sprite FlowerYellow, FlowerBlue, FlowerBlack, FlowerPink, FlowerStar;
 }

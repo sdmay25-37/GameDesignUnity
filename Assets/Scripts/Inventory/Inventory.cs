@@ -14,11 +14,6 @@ public class Inventory {
             MainManager.Instance.inventoryInit = true;
             AddItem(new Item {itemType = Item.ItemType.SeedYellow, amount = 3});
             AddItem(new Item {itemType = Item.ItemType.SeedBlue, amount = 3});
-            //AddItem(new Item {itemType = Item.ItemType.SeedBlack, amount = 1});
-            //AddItem(new Item {itemType = Item.ItemType.SeedPink, amount = 1});
-            //AddItem(new Item {itemType = Item.ItemType.SeedStar, amount = 1});
-
-            // AddItem(new Item {itemType = Item.ItemType.Coin, amount = 0});
             AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
             AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
             AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
@@ -30,6 +25,10 @@ public class Inventory {
     }
 
     public void AddItem(Item item){
+        Item potential = item.handlFlower();
+        if (potential != null){
+            item = potential;
+        }
         if(item.isStackable()){
             bool alreadyExists = false;
             foreach (Item inventoryItem in itemList){
@@ -82,6 +81,7 @@ public class Inventory {
         }
         return false;
     }
+
     public int GetItemCount(Item.ItemType itemType)
     {
         foreach (Item inventoryItem in itemList)

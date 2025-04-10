@@ -1,26 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public static EnemyManager manager;
-    [SerializeField] EnemyAI[] enemies;
-    [SerializeField] FastEnemyAI[] fEnemies;
+    private static List<EnemyAI> enemyList = new List<EnemyAI>();
+    private static List<FastEnemyAI> fastEnemyList = new List<FastEnemyAI>();
+    [SerializeField] EnemyAI[] enemies;// = new EnemyAI[2];
+    [SerializeField] FastEnemyAI[] fEnemies;// = new FastEnemyAI[2];
 
-    void OnAwake()
+    void Awake()
     {
-        manager = this;
+        foreach (EnemyAI ai in enemies)
+        {
+            enemyList.Add(ai);
+        }
+        foreach(FastEnemyAI ai in fEnemies)
+        {
+            fastEnemyList.Add(ai);
+        }
     }
 
     public static void AddLight(LightArea light)
     {
-        foreach(EnemyAI ai in manager.enemies)
+        foreach(EnemyAI ai in enemyList)
         {
             ai.AddLight(light);
         }
 
-        foreach(FastEnemyAI ai in manager.fEnemies)
+        foreach(FastEnemyAI ai in fastEnemyList)
         {
             ai.AddLight(light);
         }
