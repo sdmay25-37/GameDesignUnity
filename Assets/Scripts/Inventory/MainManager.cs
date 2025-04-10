@@ -10,6 +10,11 @@ public class MainManager : MonoBehaviour
     public List<Item> itemList = new List<Item>();
     public Item[] equipmentSetList = new Item[3];
 
+    public List<Farm> activeTiles = new List<Farm>();
+    public Dictionary<Vector3Int, Item.ItemType> seedTypeTracker = new Dictionary<Vector3Int, Item.ItemType>();
+
+    // public List<Vector3Int> tilePositions = new List<Vector3Int>();
+
     public bool inventoryInit = false;
     public bool equipmentInit = false;
 

@@ -6,8 +6,10 @@ using UnityEngine.Tilemaps;
 
 public class FarmController : MonoBehaviour
 {
-    [SerializeField] private float minGrowthTime = 2f; // Minimum growth time
-    [SerializeField] private float maxGrowthTime = 5f; // Maximum growth time
+    // [SerializeField] private float minGrowthTime = 30f; // Minimum growth time
+    // [SerializeField] private float maxGrowthTime = 60f; // Maximum growth time
+    private float minGrowthTime = 5f; // Minimum growth time
+    private float maxGrowthTime = 15f; // Maximum growth time
 
     [SerializeField]
     private Tilemap map;
@@ -15,23 +17,24 @@ public class FarmController : MonoBehaviour
     [SerializeField]
     private Tile[] tiles;
 
-    private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
+    // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
 
     // Tiles managed by this FarmController
     [HideInInspector] public Vector3Int[] farmTiles;
 
     public Tilemap Map => map;
 
-    private List<Farm> activeTiles;
+    // private List<Farm> activeTiles;
 
     private Color targetColor = new Color(1.0f, 0.7f, 0.7f);
 
     void Start()
     {
         InitFarmTiles();
-        activeTiles = new List<Farm>();
-        seedTypeTracker = new Dictionary<Vector3Int, Item.ItemType>();
-        Debug.Log($"FarmController '{name}' initialized with {farmTiles.Length} tiles.");
+        foreach (Farm farm in MainManager.Instance.activeTiles)
+        {
+            map.SetTile(farm.loc, tiles[farm.farmstate + 4 * (int)farm.flower]);
+        }
     }
 
     void Update()
@@ -58,10 +61,11 @@ public class FarmController : MonoBehaviour
 
     private void FarmUpdate()
     {
-        for (int i = activeTiles.Count - 1; i >= 0; i--)
+        for (int i = MainManager.Instance.activeTiles.Count - 1; i >= 0; i--)
         {
-            Farm farm = activeTiles[i];
+            Farm farm = MainManager.Instance.activeTiles[i];
             farm.timer -= Time.deltaTime; 
+            Debug.Log($"Tile {farm.loc} timer: {farm.timer}");
 
             if (farm.timer > 0) continue; 
 
@@ -71,7 +75,7 @@ public class FarmController : MonoBehaviour
             if (farm.farmstate >= (int)FARMSTATE.FLOWER)
             {
                 Debug.Log($"Tile at {farm.loc} in '{name}' has fully grown. Removing from active tiles.");
-                activeTiles.RemoveAt(i);
+                MainManager.Instance.activeTiles.RemoveAt(i);
                 continue;
             }
 
@@ -97,7 +101,7 @@ public class FarmController : MonoBehaviour
         {
             Debug.Log($"Tile at {spot} in '{name}' is EMPTY. Planting SEED.");
             float initialTimer = UnityEngine.Random.Range(minGrowthTime, maxGrowthTime); // Random initial timer
-            activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer, flowerType));
+            MainManager.Instance.activeTiles.Add(new Farm(spot, (int)FARMSTATE.SEED, initialTimer, flowerType));
             map.SetTile(spot, tiles[(int)flowerType * 4 + (int)FARMSTATE.SEED]);
             status = 1;
             
@@ -138,13 +142,13 @@ public class FarmController : MonoBehaviour
     }
 
     public void setSeedTypeAtPos(Item.ItemType type, Vector3Int loc){
-        seedTypeTracker[loc] = type;
+        MainManager.Instance.seedTypeTracker[loc] = type;
     }
 
     public Item.ItemType getSeedTypeAtPos(Vector3Int loc, Boolean remove = false){
-        Item.ItemType type = seedTypeTracker[loc];
+        Item.ItemType type = MainManager.Instance.seedTypeTracker[loc];
         if (remove){
-            seedTypeTracker.Remove(loc);
+            MainManager.Instance.seedTypeTracker.Remove(loc);
         }
         return type;
     }
