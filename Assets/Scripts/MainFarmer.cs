@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,12 +9,18 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private PlaceablesSpawner spawner;
     [SerializeField] private MessagePopup messagePopup;
     [SerializeField] private Collider2D playerCollider;
+    public GameObject controlsUI;
 
     // Speed vars
     [SerializeField] private float multiplierSpeed = 6;
     [SerializeField] private float regularSpeed = 3;
     public bool multiply = false;
     public bool myLight = false;
+
+    //for pause
+    private bool isPaused = false;
+
+
 
     // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
     private FLOWER flowerTypeSelected = FLOWER.YELLOW;
@@ -52,7 +59,9 @@ public class MainFarmer : MonoBehaviour
         equipmentSet = new EquipmentSet();
         uiInventory.SetInventory(inventory);
         uiInventory.SetEquipmentSet(equipmentSet);
-        
+        controlsUI.SetActive(false);
+
+
         // If you want it to spawn an item- uncomment this
         // ItemObject.CreateItemObject(new Vector3(0,1,0), new Item{itemType=Item.ItemType.Seed1});
 
@@ -99,6 +108,16 @@ public class MainFarmer : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) direction.x = 1;
 
         direction.Normalize();
+
+        //Opening the escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isPaused)
+                PauseGame();
+            else
+                ResumeGame();
+        }
+        
 
         // Move the character
         if (multiply){
@@ -385,6 +404,28 @@ public class MainFarmer : MonoBehaviour
             seedsUnlocked.Add(flower);
             seedsUnlocked.Sort();
         }
+    }
+
+    void PauseGame()
+    {
+        controlsUI.SetActive(true);
+        for (int i = 0; i < controlsUI.transform.childCount; i++)
+        {
+            Transform child = controlsUI.transform.GetChild(i);
+            child.gameObject.SetActive(i == 0);
+        }
+        Debug.Log("Escape Pressed - Paused");
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        controlsUI.SetActive(false);
+        Debug.Log("Escape Pressed - Unpaused");
+
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
 }

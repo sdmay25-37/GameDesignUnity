@@ -1235,6 +1235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622308535}
   - component: {fileID: 622308536}
+  - component: {fileID: 622308537}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1279,6 +1280,19 @@ MonoBehaviour:
   targetScene: 
   spawnPosition: {x: 0, y: 0, z: 0}
   blackout: {fileID: 7224346420560469160, guid: 486f157790bfdb0468a909bd95212dcd, type: 3}
+--- !u!114 &622308537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622308534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ed44bb51c22e540bc0ea82ba672013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 1164227795}
 --- !u!1 &626946850
 GameObject:
   m_ObjectHideFlags: 0
