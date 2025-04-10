@@ -208,14 +208,19 @@ public class Farm
         switch ((int)item)
         {
             case (int)Item.ItemType.SeedYellow:
+            case (int)Item.ItemType.FlowerYellow:
                 return FLOWER.YELLOW;
             case (int)Item.ItemType.SeedBlue:
+            case (int)Item.ItemType.FlowerBlue:
                 return FLOWER.BLUE;
             case (int)Item.ItemType.SeedBlack:
+            case (int)Item.ItemType.FlowerBlack:
                 return FLOWER.BLACK;
             case (int)Item.ItemType.SeedPink:
+            case (int)Item.ItemType.FlowerPink:
                 return FLOWER.PINK;
             case (int)Item.ItemType.SeedStar:
+            case (int)Item.ItemType.FlowerStar:
                 return FLOWER.STAR;
             default:
                 return FLOWER.YELLOW;//Might cause problems
