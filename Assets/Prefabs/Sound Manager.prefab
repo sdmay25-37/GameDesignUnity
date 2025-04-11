@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 6116528944242991428}
   sfxSource: {fileID: 6116528944242991428}
+  sounds: {fileID: 7579796801637298411}
   volume: 0
 --- !u!114 &7579796801637298411
 MonoBehaviour:
