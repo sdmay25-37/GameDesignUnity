@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Pathfinding
 {
-    private int maxIterations = 10000; // Depending on how the game runs this can be changed NOTE WAS 3000
+    private int maxIterations = 500; // Depending on how the game runs this can be changed NOTE WAS 3000
     private float tolerance = 1.0f; // Starting tolerance, will progressively increase
     private int visitThreshold = 3; // Maximum times a node can be revisited to prevent oscillation
 
@@ -27,7 +27,7 @@ public class Pathfinding
             if (iterationCount >= maxIterations)
             {
                 // Signal failure to find a path
-                Debug.LogWarning("Pathfinding exceeded max iterations. Returning null.");
+                //Debug.LogWarning("Pathfinding exceeded max iterations. Returning null.");
                 return null;
             }
 

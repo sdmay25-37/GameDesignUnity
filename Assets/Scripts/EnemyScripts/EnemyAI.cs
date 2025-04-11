@@ -50,7 +50,7 @@ public class EnemyAI : MonoBehaviour
             if (rawPath == null || rawPath.Count == 0)
             {
                 // If no path is found, fallback to roaming
-                Debug.LogWarning("Pathfinding failed. Falling back to roam.");
+                //Debug.LogWarning("Pathfinding failed. Falling back to roam.");
                 StartRoam();
                 return;
             }
@@ -103,6 +103,7 @@ public class EnemyAI : MonoBehaviour
             currentPathIndex = 0;
             animator.SetFloat("MoveX", 0);  // Stop animation when idle
         }
+        cooldownTimer = 0.3f;
     }
 
     void Roam()
@@ -121,7 +122,7 @@ public class EnemyAI : MonoBehaviour
 
         if (rawPath == null || rawPath.Count == 0)
         {
-            Debug.LogWarning("No path found for roaming.");
+            //Debug.LogWarning("No path found for roaming.");
             return;
         }
 
