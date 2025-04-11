@@ -200,6 +200,7 @@ public class MainFarmer : MonoBehaviour
                         messagePopup.SendPopupMessage($"No {flowerTypeSelected.ToString()} seeds", Farm.FlowerToColor(flowerTypeSelected));
                         return;
                     }
+                    SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.plantSound);
                     plant(controller, pos, Farm.FlowerToItemType(flowerTypeSelected));
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos, flowerTypeSelected); // Delegate interaction to the correct controller

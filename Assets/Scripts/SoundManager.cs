@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public Sounds sounds;
 
     public float volume;
     private void Awake()
