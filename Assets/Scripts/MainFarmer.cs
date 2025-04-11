@@ -9,7 +9,7 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private PlaceablesSpawner spawner;
     [SerializeField] private MessagePopup messagePopup;
     [SerializeField] private Collider2D playerCollider;
-    [SerializeField] public GameObject controlsUI;
+    public GameObject controlsUI;
 
     // Speed vars
     [SerializeField] private float multiplierSpeed = 6;
