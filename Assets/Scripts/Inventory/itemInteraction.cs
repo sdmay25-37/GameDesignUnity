@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class test_item : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class test_item : MonoBehaviour
                         ItemObject itemObject = other.GetComponent<ItemObject>();
                         if(itemObject != null){
                             inventory.AddItem(itemObject.GetItem());
+                            MainFarmer.UnlockSeed(Farm.FlowerToItemType(itemObject.GetItem().itemType));
                             itemObject.DestroySelf();
                         }
                         pickUp(other.gameObject);

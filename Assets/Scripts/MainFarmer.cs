@@ -24,7 +24,7 @@ public class MainFarmer : MonoBehaviour
 
     // private Dictionary<Vector3Int, Item.ItemType> seedTypeTracker;
     private FLOWER flowerTypeSelected = FLOWER.YELLOW;
-    private List<FLOWER> seedsUnlocked = new List<FLOWER>();
+    private static List<FLOWER> seedsUnlocked = new List<FLOWER>();
 
     private Vector2 direction;
     [SerializeField] private Transform point;
@@ -127,9 +127,9 @@ public class MainFarmer : MonoBehaviour
         }
 
         // Handle actions when the left mouse button is clicked
-        if (canPlant && Input.GetKeyDown(KeyCode.Space))
+        if (canPlant && Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "HomeFarmScene")
         {
-            Action();
+            PlantSeed();
         }
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -167,7 +167,7 @@ public class MainFarmer : MonoBehaviour
         SetAnimationParameters(direction.x, direction.y);
     }
 
-    public void Action()
+    public void PlantSeed()
     {
         // Check if there are any controllers assigned
         if (controllers == null || controllers.Count == 0)
@@ -398,12 +398,13 @@ public class MainFarmer : MonoBehaviour
         inventory.AddItem(new Item { itemType = type, amount = Farm.FlowerHarvestRate(Farm.FlowerToItemType(type))});
     }
 
-    private void UnlockSeed(FLOWER flower)
+    public static void UnlockSeed(FLOWER flower)
     {
         if (!seedsUnlocked.Contains(flower))
         {
             seedsUnlocked.Add(flower);
             seedsUnlocked.Sort();
+            Debug.Log("unlocked seed");
         }
     }
 
