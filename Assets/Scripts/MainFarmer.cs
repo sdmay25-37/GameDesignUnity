@@ -9,7 +9,7 @@ public class MainFarmer : MonoBehaviour
     [SerializeField] private PlaceablesSpawner spawner;
     [SerializeField] private MessagePopup messagePopup;
     [SerializeField] private Collider2D playerCollider;
-    public GameObject controlsUI;
+    [SerializeField] public GameObject controlsUI;
 
     // Speed vars
     [SerializeField] private float multiplierSpeed = 6;
@@ -422,6 +422,11 @@ public class MainFarmer : MonoBehaviour
     public void ResumeGame()
     {
         controlsUI.SetActive(false);
+        for (int i = 0; i < controlsUI.transform.childCount; i++)
+        {
+            Transform child = controlsUI.transform.GetChild(i);
+            child.gameObject.SetActive(i == -1);
+        }
         Debug.Log("Escape Pressed - Unpaused");
 
         Time.timeScale = 1f;

@@ -32037,7 +32037,7 @@ PrefabInstance:
     - target: {fileID: 6159648883823741495, guid: 51378723607f2db479bd6df871370429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4180774988432817545, guid: 7a03c9fd2692f5c4d98d6e2aac2b69c0, type: 3}
+      objectReference: {fileID: 1167416733}
     - target: {fileID: 6159648883823741495, guid: 51378723607f2db479bd6df871370429, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
@@ -33454,6 +33454,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 683460418835414503, guid: 7a03c9fd2692f5c4d98d6e2aac2b69c0, type: 3}
   m_PrefabInstance: {fileID: 94093121162881472}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1167416733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4180774988432817545, guid: 7a03c9fd2692f5c4d98d6e2aac2b69c0, type: 3}
+  m_PrefabInstance: {fileID: 94093121162881472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9390ff08575fda49847fd3696b3c205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1353298553
 GameObject:
   m_ObjectHideFlags: 0
