@@ -83,7 +83,7 @@ public class Item {
             case ItemType.FlowerBlue: return new Item{itemType=ItemType.SeedBlue, amount=3};
             case ItemType.FlowerBlack: return new Item{itemType=ItemType.SeedBlack, amount=3};
             case ItemType.FlowerPink: return new Item{itemType=ItemType.SeedPink, amount=2};
-            case ItemType.FlowerStar: return new Item{itemType=ItemType.SeedBlue, amount=2};
+            case ItemType.FlowerStar: return new Item{itemType=ItemType.SeedStar, amount=2};
             default: return null;
         }
     }

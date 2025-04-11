@@ -689,7 +689,7 @@ MonoBehaviour:
   - {fileID: 1610336173}
   - {fileID: 511305220}
   - {fileID: 1894143047}
-  probability: 0.5
+  probability: 0.8
 --- !u!114 &572907594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,7 +706,7 @@ MonoBehaviour:
   - {fileID: 1892014358}
   - {fileID: 1567638280}
   - {fileID: 1399143476}
-  probability: 0.5
+  probability: 0.8
 --- !u!114 &572907595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
   - {fileID: 110489269}
   - {fileID: 214948887}
   - {fileID: 373270888}
-  probability: 0.2
+  probability: 0.5
 --- !u!114 &572907596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,7 +740,7 @@ MonoBehaviour:
   - {fileID: 1378806380}
   - {fileID: 552844560}
   - {fileID: 1273774469}
-  probability: 0.2
+  probability: 0.5
 --- !u!114 &572907597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   - {fileID: 1678230876}
   - {fileID: 511305220}
   - {fileID: 1399143476}
-  probability: 0.5
+  probability: 0.8
 --- !u!1 &705788444
 GameObject:
   m_ObjectHideFlags: 0
