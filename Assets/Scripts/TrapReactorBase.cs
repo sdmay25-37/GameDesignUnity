@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class TrapReactorBase : MonoBehaviour
 {
-    abstract public void Trapped();
+    abstract public void Trapped(Vector3 trapPos);
 }

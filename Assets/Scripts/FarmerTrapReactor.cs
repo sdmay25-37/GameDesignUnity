@@ -15,7 +15,7 @@ public class FarmerTrapReactor : TrapReactorBase
         }
     }
     // Start is called before the first frame update
-    override public void Trapped()
+    override public void Trapped(Vector3 trapPos)
     {
         StartCoroutine(farmerscript.Immobilize());
     }

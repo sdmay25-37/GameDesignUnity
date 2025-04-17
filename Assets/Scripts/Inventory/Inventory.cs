@@ -14,11 +14,13 @@ public class Inventory {
             MainManager.Instance.inventoryInit = true;
             AddItem(new Item {itemType = Item.ItemType.SeedYellow, amount = 3});
             AddItem(new Item {itemType = Item.ItemType.SeedBlue, amount = 3});
-            AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Lantern, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Hat, amount = 1});
-            AddItem(new Item {itemType = Item.ItemType.Shoes, amount = 1});
+
+            //Temp
+            AddItem(new Item { itemType = Item.ItemType.SeedPink, amount = 14});
+            AddItem(new Item { itemType = Item.ItemType.Lantern, amount = 3 });
+            AddItem(new Item { itemType = Item.ItemType.Hat, amount = 1 });
+            AddItem(new Item { itemType = Item.ItemType.Shoes, amount = 1 });
+            AddItem(new Item { itemType = Item.ItemType.Trap, amount = 1 });
         }
 
         Inventory.inventory = this;

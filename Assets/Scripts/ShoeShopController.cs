@@ -3,68 +3,54 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ShopController : NPCController
+public class ShoeShopController : NPCController
 {
-    [SerializeField] private bool sellsTraps;
-    [SerializeField] private int cost;
-    private Item soldItem;
-    private Item.ItemType costType;
-    private string itemName, costName;
+    private static bool boughtShoes;
+    private int cost = 20;
+    private Item soldItem = new Item {itemType = Item.ItemType.Shoes, amount = 1};
+    private Item.ItemType costType = Item.ItemType.SeedBlue;
     private Inventory inv;
     private bool talking;
     [SerializeField] private TextMeshProUGUI dialog;
 
-    private void Start()
-    {
-        if(sellsTraps)
-        {
-            soldItem = new Item {itemType = Item.ItemType.Trap, amount = 1};
-            itemName = "trap";
-            costName = "black seeds";
-            costType = Item.ItemType.SeedBlack;
-        }
-        else
-        {
-            soldItem = new Item { itemType = Item.ItemType.Lantern, amount = 1 };
-            itemName = "lantern";
-            costName = "yellow seeds";
-            costType = Item.ItemType.SeedYellow; //Change seed depending
-        }
-    }
-
     public override void Interaction()
     {
-        if(talking)
+        if (talking)
         {
             return;
         }
 
-        if(popup.gameObject.activeSelf)
+        if (popup.gameObject.activeSelf)
         {
             popup.gameObject.SetActive(false);
             return;
         }
 
-        if(CanAfford())
+        if (boughtShoes)
         {
-            Trade();
+            popup.gameObject.SetActive(true);
+            StartCoroutine(SwitchText("You already have the shoes, you don't need another pair"));
+        }
+        else if(!CanAfford())
+        {
+            popup.gameObject.SetActive(true);
+            StartCoroutine(SwitchText("Your a few seeds short, bring me 20 blue seeds and I'll give you a pair of swift soles"));
         }
         else
         {
-            NotEnoughMessage();
+            Trade();
         }
     }
-
     private bool CanAfford()
     {
-        if(inv == null)
+        if (inv == null)
         {
             inv = Inventory.GetInventory();
         }
 
         int itemCount = inv.GetItemCount(costType);
 
-        if(itemCount >= cost)
+        if (itemCount >= cost)
         {
             return true;
         }
@@ -76,27 +62,14 @@ public class ShopController : NPCController
 
     private void Trade()
     {
-        for(int i = 0; i < cost; i++)
+        for (int i = 0; i < cost; i++)
         {
             inv.RemoveItem(new Item { itemType = costType, amount = 1 });
         }
 
-        inv.AddItem(new Item { itemType = soldItem.itemType, amount = soldItem.amount});
+        inv.AddItem(new Item { itemType = soldItem.itemType, amount = soldItem.amount });
         SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.shopSound);
-    }
-
-    private void NotEnoughMessage()
-    {
-        popup.gameObject.SetActive(true);
-        string message = "You are a few " + costName + " short, come back when you've got at least " + cost + " and I'll trade you for a " + itemName + ".";
-        StartCoroutine(SwitchText(message));
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-        StopAllCoroutines();
-        talking = false;
+        boughtShoes = true;
     }
 
     private IEnumerator SwitchText(string text)

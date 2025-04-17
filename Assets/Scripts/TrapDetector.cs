@@ -17,8 +17,9 @@ public class TrapDetector : MonoBehaviour
 
         if(trapReactor != null)
         {
-            trapReactor.Trapped();
+            trapReactor.Trapped(transform.position);
             animator.SetTrigger("Activate");
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.trapSound);
             onCooldown = true;
 
             if (single_use)

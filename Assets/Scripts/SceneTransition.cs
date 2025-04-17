@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEditor;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +11,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private string targetScene; // Scene to transition to
     [SerializeField] private Vector3 spawnPosition; // Where the player spawns in the target scene
     [SerializeField] private GameObject blackout;
+    private Boolean transitioning = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,9 +33,9 @@ public class SceneTransition : MonoBehaviour
 
     private void Update()
     {
-        if(MainManager.Instance.died){
+        if(MainManager.Instance.died && !transitioning){
             StartCoroutine(Death());
-            MainManager.Instance.died = false;
+            //MainManager.Instance.died = false; Moved to the end of the death coroutine
         }
     }
 
@@ -103,8 +106,10 @@ public class SceneTransition : MonoBehaviour
     }
 
     private IEnumerator Death(){
+        transitioning = true;
         GameObject blackbox = Instantiate(blackout);
         Image fadebox = blackbox.GetComponentInChildren<Image>();
+        Animator cutscene = blackbox.GetComponentInChildren<Animator>();
         Color color = new Color(0, 0, 0, 0);
         while (color.a < 1f)
         {
@@ -112,6 +117,13 @@ public class SceneTransition : MonoBehaviour
             color.a += 0.01f;
             yield return null;
         }
+        yield return new WaitForSeconds(1);
+        cutscene.SetTrigger("Animate");
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => cutscene.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99);
+
+        MainManager.Instance.died = false;
+        transitioning = false;
         SceneManager.LoadScene(1);
     }
 

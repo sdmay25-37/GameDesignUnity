@@ -209,6 +209,7 @@ public class MainFarmer : MonoBehaviour
                 }
                 else if (tile.Equals(pos) && controller.IsFlower(pos))
                 {
+                    SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.harvestSound);
                     Debug.Log($"Tile matched at position: {pos} in FarmController: {controller.name}");
                     controller.InteractTile(pos, flowerTypeSelected); // Delegate interaction to the correct controller
                     collect(controller, pos);
@@ -365,12 +366,9 @@ public class MainFarmer : MonoBehaviour
     }
 
     public void Death(){
-        if(hat == true){
-            equipmentSet.UnequipItem(0, true);
-        }else{
-            equipmentSet.UnequipItem(1, true);
-            MainManager.Instance.died = true;
-        }
+        //equipmentSet.UnequipItem(1, true);
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.deathSound);
+        MainManager.Instance.died = true;
     }
 
     public IEnumerator Immobilize()

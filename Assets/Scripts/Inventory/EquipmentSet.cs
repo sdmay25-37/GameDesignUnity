@@ -24,6 +24,10 @@ public class EquipmentSet {
         Item current = GetEquipmentSetItem(index);
         UnequipItem(index);
         equipmentSetList[index] = item;
+        if(item.itemType == Item.ItemType.Hat)
+        {
+            Farm.hatMod = 2;
+        }
         OnEquipmentListChanged?.Invoke(this, EventArgs.Empty);
         return current.itemType;
     }
@@ -32,6 +36,10 @@ public class EquipmentSet {
         // if(destroy){
         //     equipmentSetList[index].GameObject
         // }
+        if (equipmentSetList[index].itemType == Item.ItemType.Hat)
+        {
+            Farm.hatMod = 0;
+        }
         equipmentSetList[index] = new Item {itemType = Item.ItemType.Empty};
         OnEquipmentListChanged?.Invoke(this, EventArgs.Empty);
     }

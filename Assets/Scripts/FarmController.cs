@@ -199,6 +199,8 @@ public enum FLOWER
 
 public class Farm
 {
+    static public int hatMod = 0;
+
     public Vector3Int loc;
     public int farmstate;
     public float timer;
@@ -285,15 +287,15 @@ public class Farm
         switch ((int)flower)
         {
             case (int)FLOWER.YELLOW:
-                return 3;
+                return 3 + hatMod;
             case (int)FLOWER.BLUE:
-                return 3;
+                return 3 + hatMod;
             case (int)FLOWER.BLACK:
-                return 3;
+                return 3 + hatMod;
             case (int)FLOWER.PINK:
-                return 2;
+                return 2 + hatMod/2;
             case (int)FLOWER.STAR:
-                return 2;
+                return 2 + hatMod/2;
             default:
                 return 0;
         }
