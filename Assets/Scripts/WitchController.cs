@@ -47,13 +47,13 @@ public class WitchController : NPCController
 
     private void DialogIntro()
     {
-        string message = "Hello there farmer.";
+        string message = "Hello there farmer";
         StartCoroutine(SwitchText(message));
     }
 
     private void DialogMain()
     {
-        string message = "Heading into the forest? I'd be careful if I were you, awful things lurk in the shadows.";
+        string message = "Heading into the forest? I'd be careful if I were you, awful things lurk in the shadows";
         StartCoroutine(SwitchText(message));
     }
 

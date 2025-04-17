@@ -88,7 +88,7 @@ public class FarmController : MonoBehaviour
         {
             Farm farm = MainManager.Instance.activeTiles[i];
             farm.timer -= Time.deltaTime; 
-            Debug.Log($"Tile {farm.loc} timer: {farm.timer}");
+            //Debug.Log($"Tile {farm.loc} timer: {farm.timer}");
 
             if (farm.timer > 0) continue; 
 
@@ -98,7 +98,7 @@ public class FarmController : MonoBehaviour
 
             if (farm.farmstate >= (int)FARMSTATE.FLOWER)
             {
-                Debug.Log($"Tile at {farm.loc} in '{name}' has fully grown. Removing from active tiles.");
+                //Debug.Log($"Tile at {farm.loc} in '{name}' has fully grown. Removing from active tiles.");
                 MainManager.Instance.activeTiles.RemoveAt(i);
                 continue;
             }
@@ -106,7 +106,7 @@ public class FarmController : MonoBehaviour
             try
             {
                 map.SetTile(farm.loc, tiles[++farm.farmstate + 4 * (int)farm.flower]);
-                Debug.Log($"Tile at {farm.loc} in '{name}' updated to state {farm.farmstate}.");
+                //Debug.Log($"Tile at {farm.loc} in '{name}' updated to state {farm.farmstate}.");
             }
             catch (System.Exception ex)
             {
