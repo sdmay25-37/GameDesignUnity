@@ -14,6 +14,8 @@ public class Inventory {
             MainManager.Instance.inventoryInit = true;
             AddItem(new Item {itemType = Item.ItemType.SeedYellow, amount = 3});
             AddItem(new Item {itemType = Item.ItemType.SeedBlue, amount = 3});
+            AddItem(new Item { itemType = Item.ItemType.Lantern, amount = 3 });
+            AddItem(new Item { itemType = Item.ItemType.Trap, amount = 3 });
         }
 
         Inventory.inventory = this;

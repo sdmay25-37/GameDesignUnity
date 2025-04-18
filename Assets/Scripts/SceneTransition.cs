@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private string targetScene; // Scene to transition to
     [SerializeField] private Vector3 spawnPosition; // Where the player spawns in the target scene
     [SerializeField] private GameObject blackout;
+    private static GameObject blackoutBox;
     private Boolean transitioning = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,6 +30,7 @@ public class SceneTransition : MonoBehaviour
 
     private void Start()
     {
+        blackoutBox = blackout;
         StartCoroutine(FadeIn());
     }
 
@@ -107,6 +110,7 @@ public class SceneTransition : MonoBehaviour
 
     private IEnumerator Death(){
         transitioning = true;
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.deathSound);
         GameObject blackbox = Instantiate(blackout);
         Image fadebox = blackbox.GetComponentInChildren<Image>();
         Animator cutscene = blackbox.GetComponentInChildren<Animator>();
@@ -127,4 +131,29 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public static IEnumerator EndGame()
+    {
+        GameObject blackbox = Instantiate(blackoutBox);
+        Image fadebox = blackbox.GetComponentInChildren<Image>();
+        TextMeshProUGUI text = blackbox.GetComponentInChildren<TextMeshProUGUI>();
+        Color colorText = new Color(1.0f, 1.0f, 1.0f, 0);
+        Color color = new Color(0, 0, 0, 0);
+        while (color.a < 1f)
+        {
+            text.color = colorText;
+            fadebox.color = color;
+            color.a += 0.002f;
+            colorText.a += 0.0001f;
+            yield return null;
+        }
+        while (color.a < 1f)
+        {
+            text.color = colorText;
+            colorText.a += 0.002f;
+            yield return null;
+        }
+        yield return new WaitForSeconds(2);
+        MainFarmer.StartMovement();
+        SceneManager.LoadScene("startMenu");
+    }
 }

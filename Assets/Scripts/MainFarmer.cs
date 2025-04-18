@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MainFarmer : MonoBehaviour
 {
+    private static int stopSpeed = 1;
+
     [SerializeField] private PlaceablesSpawner spawner;
     [SerializeField] private MessagePopup messagePopup;
     [SerializeField] private Collider2D playerCollider;
@@ -121,9 +123,9 @@ public class MainFarmer : MonoBehaviour
 
         // Move the character
         if (multiply){
-            transform.Translate(direction * multiplierSpeed * Time.deltaTime, Space.World);
+            transform.Translate(direction * multiplierSpeed * Time.deltaTime * stopSpeed, Space.World);
         }else{
-            transform.Translate(direction * regularSpeed * Time.deltaTime, Space.World);
+            transform.Translate(direction * regularSpeed * Time.deltaTime * stopSpeed, Space.World);
         }
 
         // Handle actions when the left mouse button is clicked
@@ -367,7 +369,6 @@ public class MainFarmer : MonoBehaviour
 
     public void Death(){
         //equipmentSet.UnequipItem(1, true);
-        SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.deathSound);
         MainManager.Instance.died = true;
     }
 
@@ -433,4 +434,13 @@ public class MainFarmer : MonoBehaviour
         isPaused = false;
     }
 
+    public static void StopMovement()
+    {
+        stopSpeed = 0;
+    }
+
+    public static void StartMovement()
+    {
+        stopSpeed = 1;
+    }
 }
