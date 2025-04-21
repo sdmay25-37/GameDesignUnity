@@ -48080,11 +48080,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1211565638011407954, guid: 7a03c9fd2692f5c4d98d6e2aac2b69c0, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 800
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 1211565638011407954, guid: 7a03c9fd2692f5c4d98d6e2aac2b69c0, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 450
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 4180774988432817545, guid: 7a03c9fd2692f5c4d98d6e2aac2b69c0, type: 3}
       propertyPath: controlsUI
