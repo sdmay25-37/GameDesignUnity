@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class DemoGuyController : NPCController
 {
-    public static bool foundRock;
-    private bool talking, boughtDemo;
+    public static bool foundRock, boughtDemo;
+    private bool talking;
     private int cost = 10;
     [SerializeField] private TextMeshProUGUI dialog;
     [SerializeField] private float timeBetweenLetters = 0.04f;

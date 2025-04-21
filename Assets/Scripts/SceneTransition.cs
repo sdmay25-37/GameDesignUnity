@@ -140,19 +140,17 @@ public class SceneTransition : MonoBehaviour
         Color color = new Color(0, 0, 0, 0);
         while (color.a < 1f)
         {
-            text.color = colorText;
             fadebox.color = color;
-            color.a += 0.002f;
-            colorText.a += 0.0001f;
+            color.a += 0.005f;
             yield return null;
         }
-        while (color.a < 1f)
+        while (colorText.a < 1f)
         {
             text.color = colorText;
             colorText.a += 0.002f;
             yield return null;
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         MainFarmer.StartMovement();
         SceneManager.LoadScene("startMenu");
     }

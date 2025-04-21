@@ -21,6 +21,7 @@ public class test_item : MonoBehaviour
                         if(itemObject != null){
                             inventory.AddItem(itemObject.GetItem());
                             MainFarmer.UnlockSeed(Farm.FlowerToItemType(itemObject.GetItem().itemType));
+                            SoundManager.Instance.PlaySFX(SoundManager.Instance.sounds.harvestSound);
                             itemObject.DestroySelf();
                         }
                         pickUp(other.gameObject);
