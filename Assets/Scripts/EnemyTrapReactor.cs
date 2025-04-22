@@ -18,9 +18,9 @@ public class EnemyTrapReactor : TrapReactorBase
         while(transform.localScale.x > 0.1)
         {
             diff = trapPos - position;
-            position = position + diff * 0.03f;
+            position = position + diff * 3f * Time.deltaTime;
             transform.position = position;
-            transform.localScale *= 0.99f;
+            transform.localScale -= transform.localScale * 2f * Time.deltaTime;
             yield return null;
         }
         Destroy(gameObject);

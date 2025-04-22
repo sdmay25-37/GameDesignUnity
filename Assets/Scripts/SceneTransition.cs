@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using TMPro;
-using UnityEditor;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
